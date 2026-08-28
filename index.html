@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Instituto Bianca Pontes | Tricologia e Terapia Capilar em Codó-MA</title>
+  <title>Instituto Bianca Pontes | Tricologia e Terapia Capilar</title>
 
   <meta
     name="description"
@@ -41,7 +41,13 @@
   }
   </script>
 
+  <!-- =====================================================
+       META PIXEL
+       Coloque o código oficial da Meta quando tiver o ID real.
+  ====================================================== -->
+
   <style>
+
     * {
       margin: 0;
       padding: 0;
@@ -96,6 +102,10 @@
       margin: auto;
     }
 
+    /* =====================================================
+       TOPO
+    ====================================================== */
+
     .topbar {
       background: var(--verde);
       color: white;
@@ -105,9 +115,13 @@
       font-weight: bold;
     }
 
+    /* =====================================================
+       NAV
+    ====================================================== */
+
     nav {
       height: 74px;
-      background: rgba(250, 248, 243, .97);
+      background: rgba(250,248,243,.97);
       border-bottom: 1px solid var(--borda);
       display: flex;
       align-items: center;
@@ -165,6 +179,10 @@
       letter-spacing: 1px;
     }
 
+    /* =====================================================
+       BOTÕES
+    ====================================================== */
+
     .btn {
       display: inline-flex;
       align-items: center;
@@ -200,12 +218,16 @@
       background: #f5f5f5;
     }
 
+    /* =====================================================
+       HERO
+    ====================================================== */
+
     .hero {
       padding: 75px 0;
       background:
         radial-gradient(
           circle at 85% 20%,
-          rgba(196, 154, 90, .15),
+          rgba(196,154,90,.15),
           transparent 30%
         ),
         linear-gradient(
@@ -283,11 +305,19 @@
       font-size: 12px;
     }
 
+    /* =====================================================
+       FOTO HERO
+    ====================================================== */
+
     .hero-photo {
       min-height: 550px;
       border-radius: 32px;
       overflow: hidden;
-      background: linear-gradient(145deg, #123d35, #2a6455);
+      background: linear-gradient(
+        145deg,
+        #123d35,
+        #2a6455
+      );
     }
 
     .hero-photo img {
@@ -312,7 +342,7 @@
     .initials {
       width: 145px;
       height: 145px;
-      border: 1px solid rgba(255, 255, 255, .35);
+      border: 1px solid rgba(255,255,255,.35);
       border-radius: 50%;
       display: flex;
       justify-content: center;
@@ -331,8 +361,12 @@
 
     .hero-placeholder span {
       font-size: 13px;
-      color: rgba(255, 255, 255, .75);
+      color: rgba(255,255,255,.75);
     }
+
+    /* =====================================================
+       SEÇÕES
+    ====================================================== */
 
     section {
       padding: 80px 0;
@@ -354,7 +388,7 @@
     h2 {
       font-family: Georgia, serif;
       color: var(--verde);
-      font-size: clamp(32px, 4vw, 48px);
+      font-size: clamp(32px,4vw,48px);
       line-height: 1.12;
       margin: 8px 0;
     }
@@ -364,9 +398,13 @@
       margin-top: 12px;
     }
 
+    /* =====================================================
+       CARDS
+    ====================================================== */
+
     .cards {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(3,1fr);
       gap: 18px;
     }
 
@@ -402,6 +440,10 @@
       font-size: 14px;
     }
 
+    /* =====================================================
+       AVALIAÇÃO
+    ====================================================== */
+
     .dark-section {
       background: var(--verde);
       color: white;
@@ -419,7 +461,7 @@
     }
 
     .dark-section p {
-      color: rgba(255, 255, 255, .75);
+      color: rgba(255,255,255,.75);
       margin: 15px 0 25px;
     }
 
@@ -432,15 +474,15 @@
       display: flex;
       gap: 13px;
       padding: 17px;
-      background: rgba(255, 255, 255, .07);
-      border: 1px solid rgba(255, 255, 255, .12);
+      background: rgba(255,255,255,.07);
+      border: 1px solid rgba(255,255,255,.12);
       border-radius: 15px;
     }
 
     .check-icon {
       width: 25px;
       height: 25px;
-      background: rgba(255, 255, 255, .15);
+      background: rgba(255,255,255,.15);
       border-radius: 50%;
       display: flex;
       align-items: center;
@@ -454,9 +496,13 @@
 
     .check span {
       display: block;
-      color: rgba(255, 255, 255, .7);
+      color: rgba(255,255,255,.7);
       font-size: 13px;
     }
+
+    /* =====================================================
+       SOBRE
+    ====================================================== */
 
     .about {
       background: white;
@@ -466,7 +512,11 @@
       min-height: 500px;
       border-radius: 30px;
       overflow: hidden;
-      background: linear-gradient(145deg, #123d35, #2b6556);
+      background: linear-gradient(
+        145deg,
+        #123d35,
+        #2b6556
+      );
     }
 
     .about-photo img {
@@ -505,6 +555,10 @@
       font-weight: bold;
     }
 
+    /* =====================================================
+       TRATAMENTOS
+    ====================================================== */
+
     .service-photo {
       width: 100%;
       height: 220px;
@@ -525,9 +579,13 @@
       font-weight: bold;
     }
 
+    /* =====================================================
+       COMO FUNCIONA
+    ====================================================== */
+
     .steps {
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
+      grid-template-columns: repeat(4,1fr);
       gap: 18px;
     }
 
@@ -538,8 +596,16 @@
       margin-bottom: 10px;
     }
 
+    /* =====================================================
+       CTA
+    ====================================================== */
+
     .offer-box {
-      background: linear-gradient(135deg, #eef5f1, #fff);
+      background: linear-gradient(
+        135deg,
+        #eef5f1,
+        #fff
+      );
       border: 1px solid var(--borda);
       border-radius: 30px;
       padding: 42px;
@@ -554,6 +620,10 @@
       max-width: 700px;
       margin-top: 10px;
     }
+
+    /* =====================================================
+       FAQ
+    ====================================================== */
 
     .faq {
       background: white;
@@ -585,6 +655,10 @@
       margin-top: 10px;
     }
 
+    /* =====================================================
+       CTA FINAL
+    ====================================================== */
+
     .final {
       background: var(--verde);
       text-align: center;
@@ -600,12 +674,16 @@
     .final p {
       max-width: 600px;
       margin: 15px auto 25px;
-      color: rgba(255, 255, 255, .75);
+      color: rgba(255,255,255,.75);
     }
+
+    /* =====================================================
+       FOOTER
+    ====================================================== */
 
     footer {
       background: #0b2c26;
-      color: rgba(255, 255, 255, .7);
+      color: rgba(255,255,255,.7);
       padding: 30px 0 90px;
       font-size: 12px;
     }
@@ -627,6 +705,10 @@
       color: inherit;
     }
 
+    /* =====================================================
+       WHATSAPP
+    ====================================================== */
+
     .whatsapp-float {
       position: fixed;
       right: 18px;
@@ -642,11 +724,19 @@
       font-size: 25px;
       font-weight: bold;
       z-index: 999;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, .25);
+      box-shadow: 0 10px 30px rgba(0,0,0,.25);
       border: 3px solid white;
     }
 
-    @media (max-width:850px) {
+    .whatsapp-float:hover {
+      transform: scale(1.05);
+    }
+
+    /* =====================================================
+       MOBILE
+    ====================================================== */
+
+    @media(max-width:850px) {
 
       .hero-grid,
       .two-columns {
@@ -686,7 +776,8 @@
       }
     }
 
-    @media (max-width:560px) {
+    @media(max-width:560px) {
+
       .container {
         width: calc(100% - 24px);
       }
@@ -755,18 +846,39 @@
       .btn {
         width: 100%;
       }
+
+      .whatsapp-float {
+        width: 56px;
+        height: 56px;
+        right: 15px;
+        bottom: 15px;
+      }
+
     }
+
   </style>
 
 </head>
 
+
 <body>
+
+
+  <!-- =====================================================
+       TOPO
+  ====================================================== -->
 
   <div class="topbar">
     📍 Atendimento em Codó-MA e região
   </div>
 
+
+  <!-- =====================================================
+       MENU
+  ====================================================== -->
+
   <nav>
+
     <div class="container nav-content">
 
       <a href="#inicio" class="logo-area">
@@ -780,16 +892,27 @@
           onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"
         >
 
-        <div class="logo-fallback" style="display:none;">
+        <div
+          class="logo-fallback"
+          style="display:none;"
+        >
           B
         </div>
 
         <div class="logo-text">
-          <strong>Instituto Bianca Pontes</strong>
-          <span>Tricologia · Terapia Capilar · Saúde</span>
+
+          <strong>
+            Instituto Bianca Pontes
+          </strong>
+
+          <span>
+            Tricologia · Terapia Capilar · Saúde
+          </span>
+
         </div>
 
       </a>
+
 
       <a
         href="#"
@@ -802,12 +925,24 @@
       </a>
 
     </div>
+
   </nav>
 
+
   <main>
-    <section class="hero" id="inicio">
+
+
+    <!-- =====================================================
+         HERO
+    ====================================================== -->
+
+    <section
+      class="hero"
+      id="inicio"
+    >
 
       <div class="container hero-grid">
+
 
         <div>
 
@@ -815,10 +950,12 @@
             Avaliação capilar em Codó-MA
           </span>
 
+
           <h1>
             Queda ou afinamento dos fios?
             Comece pela avaliação.
           </h1>
+
 
           <p class="hero-text">
             Um atendimento individualizado começa entendendo
@@ -826,6 +963,7 @@
             e fios com uma profissional especializada em
             tricologia e terapia capilar.
           </p>
+
 
           <div class="hero-benefits">
 
@@ -851,6 +989,7 @@
 
           </div>
 
+
           <a
             href="#"
             class="btn whatsapp-link"
@@ -861,11 +1000,15 @@
             Quero agendar minha avaliação →
           </a>
 
+
           <p class="hero-small">
             📍 Codó-MA · Atendimento mediante agendamento
           </p>
 
         </div>
+
+
+        <!-- FOTO PRINCIPAL -->
 
         <div class="hero-photo">
 
@@ -878,7 +1021,11 @@
             onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"
           >
 
-          <div class="hero-placeholder" style="display:none;">
+
+          <div
+            class="hero-placeholder"
+            style="display:none;"
+          >
 
             <div class="photo-placeholder-content">
 
@@ -904,9 +1051,15 @@
 
     </section>
 
+
+    <!-- =====================================================
+         PROBLEMAS
+    ====================================================== -->
+
     <section>
 
       <div class="container">
+
 
         <div class="section-title">
 
@@ -926,7 +1079,9 @@
 
         </div>
 
+
         <div class="cards">
+
 
           <article class="card">
 
@@ -945,6 +1100,7 @@
 
           </article>
 
+
           <article class="card">
 
             <div class="icon" aria-hidden="true">
@@ -961,6 +1117,7 @@
             </p>
 
           </article>
+
 
           <article class="card">
 
@@ -979,15 +1136,25 @@
 
           </article>
 
+
         </div>
 
       </div>
 
     </section>
 
-    <section class="dark-section" id="avaliacao">
+
+    <!-- =====================================================
+         AVALIAÇÃO
+    ====================================================== -->
+
+    <section
+      class="dark-section"
+      id="avaliacao"
+    >
 
       <div class="container two-columns">
+
 
         <div>
 
@@ -1005,6 +1172,7 @@
             do couro cabeludo e dos fios.
           </p>
 
+
           <a
             href="#"
             class="btn btn-white whatsapp-link"
@@ -1017,7 +1185,9 @@
 
         </div>
 
+
         <div class="check-list">
+
 
           <div class="check">
 
@@ -1026,6 +1196,7 @@
             </div>
 
             <div>
+
               <strong>
                 Anamnese detalhada
               </strong>
@@ -1033,9 +1204,11 @@
               <span>
                 Conhecimento do histórico e das principais queixas.
               </span>
+
             </div>
 
           </div>
+
 
           <div class="check">
 
@@ -1058,6 +1231,7 @@
 
           </div>
 
+
           <div class="check">
 
             <div class="check-icon" aria-hidden="true">
@@ -1074,9 +1248,11 @@
                 As possibilidades de cuidado são discutidas
                 conforme cada caso.
               </span>
+
             </div>
 
           </div>
+
 
         </div>
 
@@ -1084,9 +1260,18 @@
 
     </section>
 
-    <section class="about" id="bianca">
+
+    <!-- =====================================================
+         SOBRE BIANCA
+    ====================================================== -->
+
+    <section
+      class="about"
+      id="bianca"
+    >
 
       <div class="container two-columns">
+
 
         <div class="about-photo">
 
@@ -1099,7 +1284,11 @@
             onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"
           >
 
-          <div class="about-placeholder" style="display:none;">
+
+          <div
+            class="about-placeholder"
+            style="display:none;"
+          >
 
             <div>
 
@@ -1128,16 +1317,20 @@
 
         </div>
 
+
         <div class="about-text">
+
 
           <div class="label">
             Conheça a profissional
           </div>
 
+
           <h2>
             Experiência, responsabilidade
             e cuidado individualizado.
           </h2>
+
 
           <p>
             Bianca Pontes é enfermeira e atua há mais de
@@ -1146,6 +1339,7 @@
             e tratamento capilar.
           </p>
 
+
           <p>
             Possui formação e especializações em estética,
             terapia capilar e tricologia, além de pós-graduação
@@ -1153,19 +1347,35 @@
             em terapia capilar.
           </p>
 
+
           <p>
             No Instituto Bianca Pontes, o atendimento busca
             unir conhecimento, responsabilidade profissional
             e cuidado individualizado.
           </p>
 
+
           <div class="tags">
 
-            <span class="tag">Enfermagem</span>
-            <span class="tag">Tricologia</span>
-            <span class="tag">Terapia Capilar</span>
-            <span class="tag">Estética Clínica</span>
-            <span class="tag">Saúde Integrativa</span>
+            <span class="tag">
+              Enfermagem
+            </span>
+
+            <span class="tag">
+              Tricologia
+            </span>
+
+            <span class="tag">
+              Terapia Capilar
+            </span>
+
+            <span class="tag">
+              Estética Clínica
+            </span>
+
+            <span class="tag">
+              Saúde Integrativa
+            </span>
 
           </div>
 
@@ -1175,9 +1385,20 @@
 
     </section>
 
+
+    <!-- =====================================================
+         TRATAMENTOS
+
+         Adicione depois em img/:
+         led-capilar.jpg
+         mesoterapia-capilar.jpg
+         tricoscopia.jpg
+    ====================================================== -->
+
     <section id="tratamentos">
 
       <div class="container">
+
 
         <div class="section-title">
 
@@ -1196,14 +1417,29 @@
 
         </div>
 
+
         <div class="cards">
+
+
+          <!-- LED -->
 
           <article class="card">
 
-            <!-- IMAGEM SERÁ ADICIONADA DEPOIS -->
-            <div class="service-placeholder">
+            <img
+              src="img/led-capilar.jpg"
+              class="service-photo"
+              alt="Fototerapia LED capilar"
+              loading="lazy"
+              onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"
+            >
+
+            <div
+              class="service-placeholder"
+              style="display:none;"
+            >
               LED Capilar
             </div>
+
 
             <h3>
               Fototerapia LED Capilar
@@ -1217,12 +1453,26 @@
 
           </article>
 
+
+          <!-- MESOTERAPIA -->
+
           <article class="card">
 
-            <!-- IMAGEM SERÁ ADICIONADA DEPOIS -->
-            <div class="service-placeholder">
+            <img
+              src="img/mesoterapia-capilar.jpg"
+              class="service-photo"
+              alt="Mesoterapia capilar"
+              loading="lazy"
+              onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"
+            >
+
+            <div
+              class="service-placeholder"
+              style="display:none;"
+            >
               Mesoterapia
             </div>
+
 
             <h3>
               Mesoterapia
@@ -1235,12 +1485,26 @@
 
           </article>
 
+
+          <!-- TRICOSCOPIA -->
+
           <article class="card">
 
-            <!-- IMAGEM SERÁ ADICIONADA DEPOIS -->
-            <div class="service-placeholder">
+            <img
+              src="img/tricoscopia.jpg"
+              class="service-photo"
+              alt="Tricoscopia capilar"
+              loading="lazy"
+              onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"
+            >
+
+            <div
+              class="service-placeholder"
+              style="display:none;"
+            >
               Avaliação
             </div>
+
 
             <h3>
               Acompanhamento Capilar
@@ -1253,15 +1517,22 @@
 
           </article>
 
+
         </div>
 
       </div>
 
     </section>
 
+
+    <!-- =====================================================
+         COMO FUNCIONA
+    ====================================================== -->
+
     <section>
 
       <div class="container">
+
 
         <div class="section-title">
 
@@ -1275,7 +1546,9 @@
 
         </div>
 
+
         <div class="cards steps">
+
 
           <article class="card">
 
@@ -1294,6 +1567,7 @@
 
           </article>
 
+
           <article class="card">
 
             <div class="number" aria-hidden="true">
@@ -1310,6 +1584,7 @@
             </p>
 
           </article>
+
 
           <article class="card">
 
@@ -1328,6 +1603,7 @@
 
           </article>
 
+
           <article class="card">
 
             <div class="number" aria-hidden="true">
@@ -1345,17 +1621,25 @@
 
           </article>
 
+
         </div>
 
       </div>
 
     </section>
 
+
+    <!-- =====================================================
+         CTA
+    ====================================================== -->
+
     <section>
 
       <div class="container">
 
+
         <div class="offer-box">
+
 
           <div>
 
@@ -1374,6 +1658,7 @@
 
           </div>
 
+
           <a
             href="#"
             class="btn whatsapp-link"
@@ -1384,19 +1669,33 @@
             Falar no WhatsApp →
           </a>
 
+
         </div>
 
       </div>
 
     </section>
 
-    <section class="faq" id="faq">
+
+    <!-- =====================================================
+         FAQ
+    ====================================================== -->
+
+    <section
+      class="faq"
+      id="faq"
+    >
 
       <div class="container">
 
+
         <div
           class="section-title"
-          style="text-align:center;margin-left:auto;margin-right:auto;"
+          style="
+            text-align:center;
+            margin-left:auto;
+            margin-right:auto;
+          "
         >
 
           <div class="label">
@@ -1409,7 +1708,9 @@
 
         </div>
 
+
         <div class="faq-list">
+
 
           <details>
 
@@ -1424,6 +1725,7 @@
 
           </details>
 
+
           <details>
 
             <summary>
@@ -1436,6 +1738,7 @@
             </p>
 
           </details>
+
 
           <details>
 
@@ -1451,6 +1754,7 @@
 
           </details>
 
+
           <details>
 
             <summary>
@@ -1463,6 +1767,7 @@
             </p>
 
           </details>
+
 
           <details>
 
@@ -1478,29 +1783,39 @@
 
           </details>
 
+
         </div>
 
       </div>
 
     </section>
 
+
+    <!-- =====================================================
+         CTA FINAL
+    ====================================================== -->
+
     <section class="final">
 
       <div class="container">
 
+
         <div class="label">
           Instituto Bianca Pontes
         </div>
+
 
         <h2>
           Seu primeiro passo pode começar
           com uma avaliação.
         </h2>
 
+
         <p>
           Converse com o Instituto Bianca Pontes e
           agende sua avaliação capilar em Codó-MA.
         </p>
+
 
         <a
           href="#"
@@ -1512,14 +1827,23 @@
           Agendar pelo WhatsApp
         </a>
 
+
       </div>
 
     </section>
+
+
   </main>
+
+
+  <!-- =====================================================
+       FOOTER
+  ====================================================== -->
 
   <footer>
 
     <div class="container footer-content">
+
 
       <div>
 
@@ -1534,6 +1858,7 @@
 
       </div>
 
+
       <div>
 
         📍 Codó — Maranhão
@@ -1544,7 +1869,9 @@
 
       </div>
 
+
     </div>
+
 
     <div
       class="container"
@@ -1569,6 +1896,11 @@
 
   </footer>
 
+
+  <!-- =====================================================
+       WHATSAPP FLUTUANTE
+  ====================================================== -->
+
   <a
     href="#"
     class="whatsapp-float whatsapp-link"
@@ -1580,12 +1912,32 @@
     ☎
   </a>
 
+
+  <!-- =====================================================
+       JAVASCRIPT
+  ====================================================== -->
+
   <script>
+
+    /*
+    ========================================================
+    WHATSAPP COMERCIAL
+    ========================================================
+    */
 
     const WHATSAPP = "5599985155084";
 
-    const urlParams =
-      new URLSearchParams(window.location.search);
+
+    /*
+    ========================================================
+    CAPTURA DE UTM
+    ========================================================
+    */
+
+    const urlParams = new URLSearchParams(
+      window.location.search
+    );
+
 
     const utmKeys = [
       "utm_source",
@@ -1595,9 +1947,11 @@
       "utm_content"
     ];
 
+
     let utms = {};
 
-    utmKeys.forEach(function (key) {
+
+    utmKeys.forEach(function(key) {
 
       const value = urlParams.get(key);
 
@@ -1606,6 +1960,13 @@
       }
 
     });
+
+
+    /*
+    ========================================================
+    SALVA UTM NO NAVEGADOR
+    ========================================================
+    */
 
     try {
 
@@ -1618,16 +1979,19 @@
 
       } else {
 
-        const saved =
-          localStorage.getItem("bianca_utms");
+        const saved = localStorage.getItem(
+          "bianca_utms"
+        );
 
         if (saved) {
+
           utms = JSON.parse(saved);
+
         }
 
       }
 
-    } catch (error) {
+    } catch(error) {
 
       console.log(
         "Erro ao salvar UTM:",
@@ -1635,6 +1999,13 @@
       );
 
     }
+
+
+    /*
+    ========================================================
+    MONTA LINK DO WHATSAPP
+    ========================================================
+    */
 
     function criarWhatsApp(message) {
 
@@ -1647,20 +2018,37 @@
 
     }
 
+
+    /*
+    ========================================================
+    CONFIGURA TODOS OS BOTÕES
+    ========================================================
+    */
+
     document
       .querySelectorAll(".whatsapp-link")
-      .forEach(function (button) {
+      .forEach(function(button) {
 
         const message =
           button.dataset.message ||
           "Olá! Gostaria de agendar uma avaliação capilar.";
 
+
         button.href =
           criarWhatsApp(message);
 
+
+        /*
+        ====================================================
+        META PIXEL
+
+        Só dispara se o fbq estiver instalado.
+        ====================================================
+        */
+
         button.addEventListener(
           "click",
-          function () {
+          function() {
 
             if (typeof fbq === "function") {
 
@@ -1677,6 +2065,15 @@
               );
 
             }
+
+
+            /*
+            ==================================================
+            GOOGLE ANALYTICS 4
+
+            Só dispara se o gtag estiver instalado.
+            ==================================================
+            */
 
             if (typeof gtag === "function") {
 
@@ -1699,12 +2096,20 @@
 
       });
 
+
+    /*
+    ========================================================
+    ANO AUTOMÁTICO
+    ========================================================
+    */
+
     document
       .getElementById("year")
       .textContent =
       new Date().getFullYear();
 
   </script>
+
 
 </body>
 </html>
