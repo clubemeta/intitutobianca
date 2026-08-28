@@ -1389,10 +1389,10 @@
     <!-- =====================================================
          TRATAMENTOS
 
-         Adicione depois em img/:
-         led-capilar.jpg
-         mesoterapia-capilar.jpg
-         tricoscopia.jpg
+         LED usa foto real (led-capilar.jpg).
+         Mesoterapia e tricoscopia usam ilustrações
+         SVG nas cores da marca — troque por foto real
+         quando tiver.
     ====================================================== -->
 
     <section id="tratamentos">
@@ -1458,20 +1458,33 @@
 
           <article class="card">
 
-            <img
-              src="mesoterapia-capilar.jpg"
+            <svg
               class="service-photo"
-              alt="Mesoterapia capilar"
-              loading="lazy"
-              onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"
+              viewBox="0 0 400 220"
+              xmlns="http://www.w3.org/2000/svg"
+              role="img"
+              aria-label="Ilustração de mesoterapia capilar"
+              style="background: var(--verde-suave);"
             >
+              <line x1="140" y1="30" x2="140" y2="190" stroke="#123d35" stroke-width="1" opacity="0.15"></line>
+              <line x1="260" y1="30" x2="260" y2="190" stroke="#123d35" stroke-width="1" opacity="0.15"></line>
 
-            <div
-              class="service-placeholder"
-              style="display:none;"
-            >
-              Mesoterapia
-            </div>
+              <g transform="translate(200,60)">
+                <rect x="-16" y="0" width="32" height="66" rx="6" fill="none" stroke="#123d35" stroke-width="3"></rect>
+                <line x1="-10" y1="18" x2="10" y2="18" stroke="#123d35" stroke-width="2" opacity="0.5"></line>
+                <line x1="-10" y1="34" x2="10" y2="34" stroke="#123d35" stroke-width="2" opacity="0.5"></line>
+                <line x1="-10" y1="50" x2="10" y2="50" stroke="#123d35" stroke-width="2" opacity="0.5"></line>
+                <rect x="-13" y="30" width="26" height="30" fill="#c49a5a" opacity="0.85"></rect>
+                <rect x="-22" y="66" width="44" height="16" rx="3" fill="#123d35"></rect>
+                <line x1="0" y1="82" x2="0" y2="118" stroke="#123d35" stroke-width="3"></line>
+                <path d="M0 118 C-7 128 -7 138 0 146 C7 138 7 128 0 118 Z" fill="#c49a5a"></path>
+              </g>
+
+              <circle cx="120" cy="150" r="3" fill="#c49a5a" opacity="0.6"></circle>
+              <circle cx="280" cy="140" r="3" fill="#c49a5a" opacity="0.6"></circle>
+              <circle cx="150" cy="185" r="2.5" fill="#123d35" opacity="0.35"></circle>
+              <circle cx="255" cy="180" r="2.5" fill="#123d35" opacity="0.35"></circle>
+            </svg>
 
 
             <h3>
@@ -1490,20 +1503,23 @@
 
           <article class="card">
 
-            <img
-              src="tricoscopia.jpg"
+            <svg
               class="service-photo"
-              alt="Tricoscopia capilar"
-              loading="lazy"
-              onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"
+              viewBox="0 0 400 220"
+              xmlns="http://www.w3.org/2000/svg"
+              role="img"
+              aria-label="Ilustração de tricoscopia capilar"
+              style="background: var(--verde-suave);"
             >
+              <path d="M170 70 Q178 100 168 130" stroke="#c49a5a" stroke-width="2.5" fill="none" opacity="0.7"></path>
+              <path d="M188 65 Q198 100 186 135" stroke="#c49a5a" stroke-width="2.5" fill="none" opacity="0.7"></path>
+              <path d="M206 68 Q214 100 204 132" stroke="#c49a5a" stroke-width="2.5" fill="none" opacity="0.7"></path>
+              <path d="M224 72 Q230 100 222 128" stroke="#c49a5a" stroke-width="2.5" fill="none" opacity="0.7"></path>
 
-            <div
-              class="service-placeholder"
-              style="display:none;"
-            >
-              Avaliação
-            </div>
+              <circle cx="198" cy="100" r="52" fill="var(--creme)" stroke="#123d35" stroke-width="5"></circle>
+              <circle cx="198" cy="100" r="52" fill="none" stroke="#c49a5a" stroke-width="1" opacity="0.5"></circle>
+              <line x1="234" y1="138" x2="270" y2="174" stroke="#123d35" stroke-width="8" stroke-linecap="round"></line>
+            </svg>
 
 
             <h3>
