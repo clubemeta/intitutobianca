@@ -13,17 +13,10 @@
 
   <meta name="theme-color" content="#123d35">
 
-  <!--
-  =========================================================
-  META PIXEL
-  =========================================================
-
-  Quando tiver o ID REAL do Pixel, coloque o código oficial
-  da Meta aqui.
-
-  Não utilize um ID inventado.
-  =========================================================
-  -->
+  <!-- =====================================================
+       META PIXEL
+       Coloque o código oficial da Meta quando tiver o ID real.
+  ====================================================== -->
 
   <style>
 
@@ -72,7 +65,7 @@
 
     /* =====================================================
        TOPO
-    ===================================================== */
+    ====================================================== */
 
     .topbar {
       background: var(--verde);
@@ -85,7 +78,7 @@
 
     /* =====================================================
        NAV
-    ===================================================== */
+    ====================================================== */
 
     nav {
       height: 74px;
@@ -149,7 +142,7 @@
 
     /* =====================================================
        BOTÕES
-    ===================================================== */
+    ====================================================== */
 
     .btn {
       display: inline-flex;
@@ -180,7 +173,7 @@
 
     /* =====================================================
        HERO
-    ===================================================== */
+    ====================================================== */
 
     .hero {
       padding: 75px 0;
@@ -267,7 +260,7 @@
 
     /* =====================================================
        FOTO HERO
-    ===================================================== */
+    ====================================================== */
 
     .hero-photo {
       min-height: 550px;
@@ -326,7 +319,7 @@
 
     /* =====================================================
        SEÇÕES
-    ===================================================== */
+    ====================================================== */
 
     section {
       padding: 80px 0;
@@ -360,7 +353,7 @@
 
     /* =====================================================
        CARDS
-    ===================================================== */
+    ====================================================== */
 
     .cards {
       display: grid;
@@ -402,7 +395,7 @@
 
     /* =====================================================
        AVALIAÇÃO
-    ===================================================== */
+    ====================================================== */
 
     .dark-section {
       background: var(--verde);
@@ -462,7 +455,7 @@
 
     /* =====================================================
        SOBRE
-    ===================================================== */
+    ====================================================== */
 
     .about {
       background: white;
@@ -517,7 +510,7 @@
 
     /* =====================================================
        TRATAMENTOS
-    ===================================================== */
+    ====================================================== */
 
     .service-photo {
       width: 100%;
@@ -541,7 +534,7 @@
 
     /* =====================================================
        COMO FUNCIONA
-    ===================================================== */
+    ====================================================== */
 
     .steps {
       display: grid;
@@ -558,7 +551,7 @@
 
     /* =====================================================
        CTA
-    ===================================================== */
+    ====================================================== */
 
     .offer-box {
       background: linear-gradient(
@@ -583,7 +576,7 @@
 
     /* =====================================================
        FAQ
-    ===================================================== */
+    ====================================================== */
 
     .faq {
       background: white;
@@ -617,7 +610,7 @@
 
     /* =====================================================
        CTA FINAL
-    ===================================================== */
+    ====================================================== */
 
     .final {
       background: var(--verde);
@@ -639,7 +632,7 @@
 
     /* =====================================================
        FOOTER
-    ===================================================== */
+    ====================================================== */
 
     footer {
       background: #0b2c26;
@@ -663,7 +656,7 @@
 
     /* =====================================================
        WHATSAPP
-    ===================================================== */
+    ====================================================== */
 
     .whatsapp-float {
       position: fixed;
@@ -684,9 +677,13 @@
       border: 3px solid white;
     }
 
+    .whatsapp-float:hover {
+      transform: scale(1.05);
+    }
+
     /* =====================================================
        MOBILE
-    ===================================================== */
+    ====================================================== */
 
     @media(max-width:850px) {
 
@@ -797,6 +794,13 @@
 
       .btn {
         width: 100%;
+      }
+
+      .whatsapp-float {
+        width: 56px;
+        height: 56px;
+        right: 15px;
+        bottom: 15px;
       }
 
     }
@@ -947,7 +951,7 @@
         </div>
 
 
-        <!-- FOTO PRINCIPAL DA BIANCA -->
+        <!-- FOTO PRINCIPAL -->
 
         <div class="hero-photo">
 
@@ -986,7 +990,6 @@
       </div>
 
     </section>
-
 
 
     <!-- =====================================================
@@ -1079,7 +1082,6 @@
       </div>
 
     </section>
-
 
 
     <!-- =====================================================
@@ -1195,7 +1197,6 @@
       </div>
 
     </section>
-
 
 
     <!-- =====================================================
@@ -1320,9 +1321,13 @@
     </section>
 
 
-
     <!-- =====================================================
          TRATAMENTOS
+         
+         Você pode adicionar depois:
+         img/led-capilar.jpg
+         img/mesoterapia-capilar.jpg
+         img/tricoscopia.jpg
     ====================================================== -->
 
     <section id="tratamentos">
@@ -1383,7 +1388,6 @@
           </article>
 
 
-
           <!-- MESOTERAPIA -->
 
           <article class="card">
@@ -1415,8 +1419,7 @@
           </article>
 
 
-
-          <!-- ACOMPANHAMENTO -->
+          <!-- TRICOSCOPIA -->
 
           <article class="card">
 
@@ -1452,7 +1455,6 @@
       </div>
 
     </section>
-
 
 
     <!-- =====================================================
@@ -1559,7 +1561,6 @@
     </section>
 
 
-
     <!-- =====================================================
          CTA
     ====================================================== -->
@@ -1604,7 +1605,6 @@
       </div>
 
     </section>
-
 
 
     <!-- =====================================================
@@ -1721,7 +1721,6 @@
     </section>
 
 
-
     <!-- =====================================================
          CTA FINAL
     ====================================================== -->
@@ -1763,7 +1762,6 @@
 
 
   </main>
-
 
 
   <!-- =====================================================
@@ -1827,7 +1825,6 @@
   </footer>
 
 
-
   <!-- =====================================================
        WHATSAPP FLUTUANTE
   ====================================================== -->
@@ -1842,7 +1839,6 @@
   </a>
 
 
-
   <!-- =====================================================
        JAVASCRIPT
   ====================================================== -->
@@ -1855,8 +1851,7 @@
     ========================================================
     */
 
-    const WHATSAPP =
-      "5599985155084";
+    const WHATSAPP = "5599985155084";
 
 
     /*
@@ -1865,10 +1860,9 @@
     ========================================================
     */
 
-    const urlParams =
-      new URLSearchParams(
-        window.location.search
-      );
+    const urlParams = new URLSearchParams(
+      window.location.search
+    );
 
 
     const utmKeys = [
@@ -1885,13 +1879,10 @@
 
     utmKeys.forEach(function(key) {
 
-      const value =
-        urlParams.get(key);
+      const value = urlParams.get(key);
 
       if (value) {
-
         utms[key] = value;
-
       }
 
     });
@@ -1905,9 +1896,7 @@
 
     try {
 
-      if (
-        Object.keys(utms).length > 0
-      ) {
+      if (Object.keys(utms).length > 0) {
 
         localStorage.setItem(
           "bianca_utms",
@@ -1916,15 +1905,13 @@
 
       } else {
 
-        const saved =
-          localStorage.getItem(
-            "bianca_utms"
-          );
+        const saved = localStorage.getItem(
+          "bianca_utms"
+        );
 
         if (saved) {
 
-          utms =
-            JSON.parse(saved);
+          utms = JSON.parse(saved);
 
         }
 
@@ -1942,46 +1929,17 @@
 
     /*
     ========================================================
-    MONTA WHATSAPP
+    MONTA LINK DO WHATSAPP
     ========================================================
     */
 
     function criarWhatsApp(message) {
 
-      let origem = "";
-
-
-      Object.keys(utms).forEach(
-        function(key) {
-
-          if (utms[key]) {
-
-            origem +=
-              key +
-              "=" +
-              utms[key] +
-              " | ";
-
-          }
-
-        }
-      );
-
-
-      /*
-      Não envia UTM para a Bianca no WhatsApp
-      se você preferir uma mensagem mais limpa.
-
-      A UTM continua armazenada no navegador.
-      */
-
       return (
         "https://wa.me/" +
         WHATSAPP +
         "?text=" +
-        encodeURIComponent(
-          message
-        )
+        encodeURIComponent(message)
       );
 
     }
@@ -1994,85 +1952,75 @@
     */
 
     document
-      .querySelectorAll(
-        ".whatsapp-link"
-      )
-      .forEach(
-        function(button) {
+      .querySelectorAll(".whatsapp-link")
+      .forEach(function(button) {
+
+        const message =
+          button.dataset.message ||
+          "Olá! Gostaria de agendar uma avaliação capilar.";
 
 
-          const message =
-            button.dataset.message ||
-            "Olá! Gostaria de agendar uma avaliação capilar.";
+        button.href =
+          criarWhatsApp(message);
 
 
-          button.href =
-            criarWhatsApp(
-              message
-            );
+        /*
+        ====================================================
+        META PIXEL
 
+        Só dispara se o fbq estiver instalado.
+        ====================================================
+        */
 
-          /*
-          META PIXEL
+        button.addEventListener(
+          "click",
+          function() {
 
-          Quando o Pixel estiver instalado,
-          o evento Lead será disparado.
-          */
+            if (typeof fbq === "function") {
 
-          button.addEventListener(
-            "click",
-            function() {
+              fbq(
+                "track",
+                "Lead",
+                {
+                  content_name:
+                    "Avaliação Capilar",
 
-
-              if (
-                typeof fbq === "function"
-              ) {
-
-                fbq(
-                  "track",
-                  "Lead",
-                  {
-                    content_name:
-                      "Avaliação Capilar",
-
-                    content_category:
-                      "WhatsApp"
-                  }
-                );
-
-              }
-
-
-              /*
-              GOOGLE ANALYTICS 4
-
-              Se o GA4 estiver instalado,
-              registra o clique.
-              */
-
-              if (
-                typeof gtag === "function"
-              ) {
-
-                gtag(
-                  "event",
-                  "generate_lead",
-                  {
-                    method:
-                      "WhatsApp",
-
-                    content_name:
-                      "Avaliação Capilar"
-                  }
-                );
-
-              }
+                  content_category:
+                    "WhatsApp"
+                }
+              );
 
             }
-          );
 
-        }
-      );
+
+            /*
+            ==================================================
+            GOOGLE ANALYTICS 4
+
+            Só dispara se o gtag estiver instalado.
+            ==================================================
+            */
+
+            if (typeof gtag === "function") {
+
+              gtag(
+                "event",
+                "generate_lead",
+                {
+                  method:
+                    "WhatsApp",
+
+                  content_name:
+                    "Avaliação Capilar"
+                }
+              );
+
+            }
+
+          }
+        );
+
+      });
 
 
     /*
