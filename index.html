@@ -2,17 +2,28 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>Instituto Bianca Pontes | Tricologia e Terapia Capilar</title>
 
   <meta
     name="description"
-    content="Instituto Bianca Pontes em Codó-MA. Avaliação capilar com anamnese e tricoscopia. Agende sua avaliação."
+    content="Instituto Bianca Pontes em Codó-MA. Avaliação capilar individualizada com anamnese e tricoscopia. Atendimento para homens e mulheres."
   >
 
   <meta name="theme-color" content="#123d35">
+
+  <!--
+  =========================================================
+  META PIXEL
+  =========================================================
+
+  Quando tiver o ID REAL do Pixel, coloque o código oficial
+  da Meta aqui.
+
+  Não utilize um ID inventado.
+  =========================================================
+  -->
 
   <style>
 
@@ -49,12 +60,19 @@
       text-decoration: none;
     }
 
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
     .container {
       width: min(1120px, calc(100% - 32px));
       margin: auto;
     }
 
-    /* TOPO */
+    /* =====================================================
+       TOPO
+    ===================================================== */
 
     .topbar {
       background: var(--verde);
@@ -65,7 +83,9 @@
       font-weight: bold;
     }
 
-    /* NAV */
+    /* =====================================================
+       NAV
+    ===================================================== */
 
     nav {
       height: 74px;
@@ -83,6 +103,7 @@
       justify-content: space-between;
       align-items: center;
       width: 100%;
+      gap: 15px;
     }
 
     .logo-area {
@@ -94,12 +115,20 @@
     .logo {
       width: 43px;
       height: 43px;
+      border-radius: 50%;
+      object-fit: cover;
+      background: var(--verde);
+    }
+
+    .logo-fallback {
+      width: 43px;
+      height: 43px;
       background: var(--verde);
       color: white;
       border-radius: 50%;
       display: flex;
-      justify-content: center;
       align-items: center;
+      justify-content: center;
       font-family: Georgia, serif;
       font-size: 21px;
     }
@@ -118,7 +147,9 @@
       letter-spacing: 1px;
     }
 
-    /* BOTÕES */
+    /* =====================================================
+       BOTÕES
+    ===================================================== */
 
     .btn {
       display: inline-flex;
@@ -130,6 +161,7 @@
       padding: 15px 24px;
       font-weight: bold;
       transition: .2s;
+      cursor: pointer;
     }
 
     .btn:hover {
@@ -146,18 +178,28 @@
       background: #f5f5f5;
     }
 
-    /* HERO */
+    /* =====================================================
+       HERO
+    ===================================================== */
 
     .hero {
       padding: 75px 0;
       background:
-        radial-gradient(circle at 85% 20%, rgba(196,154,90,.15), transparent 30%),
-        linear-gradient(135deg,#faf8f3,#eef5f1);
+        radial-gradient(
+          circle at 85% 20%,
+          rgba(196,154,90,.15),
+          transparent 30%
+        ),
+        linear-gradient(
+          135deg,
+          #faf8f3,
+          #eef5f1
+        );
     }
 
     .hero-grid {
       display: grid;
-      grid-template-columns: 1.1fr .9fr;
+      grid-template-columns: 1.05fr .95fr;
       gap: 55px;
       align-items: center;
     }
@@ -186,77 +228,75 @@
     .hero-text {
       font-size: 18px;
       color: var(--cinza);
-      margin: 22px 0;
+      margin: 22px 0 26px;
       max-width: 620px;
     }
 
-    .price-area {
+    .hero-benefits {
+      display: grid;
+      gap: 9px;
+      margin-bottom: 28px;
+    }
+
+    .hero-benefit {
       display: flex;
       align-items: center;
-      gap: 18px;
-      flex-wrap: wrap;
-      margin: 25px 0;
-    }
-
-    .price {
-      background: white;
-      border: 1px solid var(--borda);
-      border-radius: 18px;
-      padding: 12px 18px;
-      box-shadow: 0 12px 30px rgba(0,0,0,.07);
-    }
-
-    .price small {
-      display: block;
-      color: var(--cinza);
-      font-size: 10px;
-      text-transform: uppercase;
-      font-weight: bold;
-    }
-
-    .price strong {
-      display: block;
-      color: var(--verde);
-      font-size: 30px;
-    }
-
-    .credit {
-      max-width: 390px;
+      gap: 10px;
+      color: var(--texto);
       font-size: 14px;
     }
 
-    .credit strong {
-      color: var(--verde);
+    .hero-benefit span {
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      background: var(--verde);
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 12px;
+      flex-shrink: 0;
     }
 
-    /* FOTO */
+    .hero-small {
+      margin-top: 14px;
+      color: var(--cinza);
+      font-size: 12px;
+    }
+
+    /* =====================================================
+       FOTO HERO
+    ===================================================== */
 
     .hero-photo {
-      min-height: 500px;
+      min-height: 550px;
       border-radius: 32px;
-      background:
-        linear-gradient(145deg,#123d35,#2a6455);
+      overflow: hidden;
+      background: linear-gradient(
+        145deg,
+        #123d35,
+        #2a6455
+      );
+    }
+
+    .hero-photo img {
+      width: 100%;
+      height: 550px;
+      object-fit: cover;
+    }
+
+    .hero-placeholder {
+      min-height: 550px;
       display: flex;
       align-items: center;
       justify-content: center;
       text-align: center;
       color: white;
-      position: relative;
-      overflow: hidden;
     }
 
-    .hero-photo:before {
-      content: "";
-      position: absolute;
-      width: 330px;
-      height: 330px;
-      border: 1px solid rgba(255,255,255,.22);
-      border-radius: 50%;
-    }
-
-    .photo-placeholder {
-      position: relative;
-      z-index: 2;
+    .photo-placeholder-content {
+      padding: 30px;
     }
 
     .initials {
@@ -272,19 +312,21 @@
       font-size: 48px;
     }
 
-    .hero-photo strong {
+    .hero-placeholder strong {
       display: block;
       font-family: Georgia, serif;
       font-size: 27px;
       margin-top: 15px;
     }
 
-    .hero-photo span {
+    .hero-placeholder span {
       font-size: 13px;
       color: rgba(255,255,255,.75);
     }
 
-    /* SEÇÕES */
+    /* =====================================================
+       SEÇÕES
+    ===================================================== */
 
     section {
       padding: 80px 0;
@@ -316,7 +358,9 @@
       margin-top: 12px;
     }
 
-    /* CARDS */
+    /* =====================================================
+       CARDS
+    ===================================================== */
 
     .cards {
       display: grid;
@@ -356,7 +400,9 @@
       font-size: 14px;
     }
 
-    /* AVALIAÇÃO */
+    /* =====================================================
+       AVALIAÇÃO
+    ===================================================== */
 
     .dark-section {
       background: var(--verde);
@@ -401,6 +447,11 @@
       display: flex;
       align-items: center;
       justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .check strong {
+      display: block;
     }
 
     .check span {
@@ -409,21 +460,38 @@
       font-size: 13px;
     }
 
-    /* SOBRE */
+    /* =====================================================
+       SOBRE
+    ===================================================== */
 
     .about {
       background: white;
     }
 
     .about-photo {
-      min-height: 430px;
+      min-height: 500px;
       border-radius: 30px;
-      background: linear-gradient(145deg,#123d35,#2b6556);
-      color: white;
+      overflow: hidden;
+      background: linear-gradient(
+        145deg,
+        #123d35,
+        #2b6556
+      );
+    }
+
+    .about-photo img {
+      width: 100%;
+      height: 500px;
+      object-fit: cover;
+    }
+
+    .about-placeholder {
+      height: 500px;
       display: flex;
       justify-content: center;
       align-items: center;
       text-align: center;
+      color: white;
     }
 
     .about-text p {
@@ -447,20 +515,33 @@
       font-weight: bold;
     }
 
-    /* TRATAMENTOS */
+    /* =====================================================
+       TRATAMENTOS
+    ===================================================== */
 
-    .service-price {
-      display: inline-block;
-      margin-top: 15px;
-      color: var(--verde);
+    .service-photo {
+      width: 100%;
+      height: 220px;
+      border-radius: 15px;
+      object-fit: cover;
+      margin-bottom: 20px;
+    }
+
+    .service-placeholder {
+      height: 220px;
       background: var(--verde-suave);
-      padding: 6px 10px;
-      border-radius: 30px;
-      font-size: 12px;
+      border-radius: 15px;
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--verde);
       font-weight: bold;
     }
 
-    /* COMO FUNCIONA */
+    /* =====================================================
+       COMO FUNCIONA
+    ===================================================== */
 
     .steps {
       display: grid;
@@ -475,10 +556,16 @@
       margin-bottom: 10px;
     }
 
-    /* OFERTA */
+    /* =====================================================
+       CTA
+    ===================================================== */
 
     .offer-box {
-      background: linear-gradient(135deg,#eef5f1,#fff);
+      background: linear-gradient(
+        135deg,
+        #eef5f1,
+        #fff
+      );
       border: 1px solid var(--borda);
       border-radius: 30px;
       padding: 42px;
@@ -494,7 +581,9 @@
       margin-top: 10px;
     }
 
-    /* FAQ */
+    /* =====================================================
+       FAQ
+    ===================================================== */
 
     .faq {
       background: white;
@@ -526,7 +615,9 @@
       margin-top: 10px;
     }
 
-    /* CTA FINAL */
+    /* =====================================================
+       CTA FINAL
+    ===================================================== */
 
     .final {
       background: var(--verde);
@@ -546,7 +637,9 @@
       color: rgba(255,255,255,.75);
     }
 
-    /* FOOTER */
+    /* =====================================================
+       FOOTER
+    ===================================================== */
 
     footer {
       background: #0b2c26;
@@ -568,7 +661,9 @@
       font-size: 18px;
     }
 
-    /* WHATSAPP */
+    /* =====================================================
+       WHATSAPP
+    ===================================================== */
 
     .whatsapp-float {
       position: fixed;
@@ -589,7 +684,9 @@
       border: 3px solid white;
     }
 
-    /* MOBILE */
+    /* =====================================================
+       MOBILE
+    ===================================================== */
 
     @media(max-width:850px) {
 
@@ -606,8 +703,23 @@
         grid-template-columns: 1fr 1fr;
       }
 
-      .hero-photo {
-        min-height: 400px;
+      .hero-photo,
+      .hero-placeholder {
+        min-height: 420px;
+      }
+
+      .hero-photo img {
+        height: 420px;
+      }
+
+      .about-photo,
+      .about-placeholder {
+        min-height: 420px;
+        height: 420px;
+      }
+
+      .about-photo img {
+        height: 420px;
       }
 
       .offer-box {
@@ -631,7 +743,7 @@
       }
 
       .logo-text strong {
-        font-size: 15px;
+        font-size: 14px;
       }
 
       .nav-btn {
@@ -660,8 +772,23 @@
         padding: 60px 0;
       }
 
-      .hero-photo {
+      .hero-photo,
+      .hero-placeholder {
         min-height: 350px;
+      }
+
+      .hero-photo img {
+        height: 350px;
+      }
+
+      .about-photo,
+      .about-placeholder {
+        min-height: 380px;
+        height: 380px;
+      }
+
+      .about-photo img {
+        height: 380px;
       }
 
       .offer-box {
@@ -671,21 +798,29 @@
       .btn {
         width: 100%;
       }
+
     }
 
   </style>
+
 </head>
+
 
 <body>
 
-  <!-- TOPO -->
+
+  <!-- =====================================================
+       TOPO
+  ====================================================== -->
 
   <div class="topbar">
-    📍 Instituto Bianca Pontes · Codó — Maranhão
+    📍 Atendimento em Codó-MA e região
   </div>
 
 
-  <!-- MENU -->
+  <!-- =====================================================
+       MENU
+  ====================================================== -->
 
   <nav>
 
@@ -693,21 +828,39 @@
 
       <a href="#inicio" class="logo-area">
 
-        <div class="logo">
+        <img
+          src="img/logo.png"
+          class="logo"
+          alt="Instituto Bianca Pontes"
+          onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"
+        >
+
+        <div
+          class="logo-fallback"
+          style="display:none;"
+        >
           B
         </div>
 
         <div class="logo-text">
-          <strong>Instituto Bianca Pontes</strong>
-          <span>Tricologia · Terapia Capilar · Saúde</span>
+
+          <strong>
+            Instituto Bianca Pontes
+          </strong>
+
+          <span>
+            Tricologia · Terapia Capilar · Saúde
+          </span>
+
         </div>
 
       </a>
 
+
       <a
         href="#"
         class="btn nav-btn whatsapp-link"
-        data-message="Olá! Vim pelo site do Instituto Bianca Pontes e gostaria de agendar uma avaliação capilar com tricoscopia."
+        data-message="Olá! Vim pelo site do Instituto Bianca Pontes e gostaria de agendar uma avaliação capilar."
       >
         Agendar avaliação
       </a>
@@ -720,11 +873,17 @@
   <main>
 
 
-    <!-- HERO -->
+    <!-- =====================================================
+         HERO
+    ====================================================== -->
 
-    <section class="hero" id="inicio">
+    <section
+      class="hero"
+      id="inicio"
+    >
 
       <div class="container hero-grid">
+
 
         <div>
 
@@ -732,39 +891,41 @@
             Avaliação capilar em Codó-MA
           </span>
 
+
           <h1>
-            Queda ou afinamento dos fios? Comece pela avaliação.
+            Queda ou afinamento dos fios?
+            Comece pela avaliação.
           </h1>
 
+
           <p class="hero-text">
-            Um atendimento individualizado começa entendendo o seu caso.
-            A avaliação capilar inclui anamnese e tricoscopia.
+            Um atendimento individualizado começa entendendo
+            o seu caso. Avalie seu histórico, couro cabeludo
+            e fios com uma profissional especializada em
+            tricologia e terapia capilar.
           </p>
 
 
-          <div class="price-area">
+          <div class="hero-benefits">
 
-            <div class="price">
-
-              <small>
-                Avaliação capilar
-              </small>
-
-              <strong>
-                R$ 100
-              </strong>
-
+            <div class="hero-benefit">
+              <span>✓</span>
+              Atendimento individualizado
             </div>
 
-            <div class="credit">
+            <div class="hero-benefit">
+              <span>✓</span>
+              Anamnese detalhada
+            </div>
 
-              <strong>
-                Iniciando o tratamento no dia da avaliação,
-                os R$ 100 são 100% revertidos como crédito
-              </strong>
+            <div class="hero-benefit">
+              <span>✓</span>
+              Exame de tricoscopia
+            </div>
 
-              no protocolo escolhido.
-
+            <div class="hero-benefit">
+              <span>✓</span>
+              Atendimento para homens e mulheres
             </div>
 
           </div>
@@ -775,32 +936,48 @@
             class="btn whatsapp-link"
             data-message="Olá! Vim pelo site do Instituto Bianca Pontes e gostaria de agendar uma avaliação capilar com tricoscopia."
           >
-            Agendar minha avaliação →
+            Quero agendar minha avaliação →
           </a>
+
+
+          <p class="hero-small">
+            📍 Codó-MA · Atendimento mediante agendamento
+          </p>
 
         </div>
 
 
-        <!--
-          IMPORTANTE:
-          Depois coloque aqui uma foto profissional da Bianca.
-        -->
+        <!-- FOTO PRINCIPAL DA BIANCA -->
 
         <div class="hero-photo">
 
-          <div class="photo-placeholder">
+          <img
+            src="img/bianca-hero.jpg"
+            alt="Bianca Pontes - Instituto Bianca Pontes"
+            onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"
+          >
 
-            <div class="initials">
-              BP
+
+          <div
+            class="hero-placeholder"
+            style="display:none;"
+          >
+
+            <div class="photo-placeholder-content">
+
+              <div class="initials">
+                BP
+              </div>
+
+              <strong>
+                Bianca Pontes
+              </strong>
+
+              <span>
+                Enfermeira · Tricologia e Terapia Capilar
+              </span>
+
             </div>
-
-            <strong>
-              Bianca Pontes
-            </strong>
-
-            <span>
-              Enfermeira · Tricologia e Terapia Capilar
-            </span>
 
           </div>
 
@@ -812,11 +989,14 @@
 
 
 
-    <!-- PROBLEMAS -->
+    <!-- =====================================================
+         PROBLEMAS
+    ====================================================== -->
 
     <section>
 
       <div class="container">
+
 
         <div class="section-title">
 
@@ -825,19 +1005,20 @@
           </div>
 
           <h2>
-            Entender o seu caso antes de escolher o cuidado.
+            O que mudou no seu cabelo?
           </h2>
 
           <p>
             Queda e afinamento dos fios podem estar relacionados
-            a diferentes fatores. Por isso, a avaliação individualizada
-            é a porta de entrada para o acompanhamento.
+            a diferentes fatores. Por isso, cada pessoa precisa
+            ser observada de forma individualizada.
           </p>
 
         </div>
 
 
         <div class="cards">
+
 
           <article class="card">
 
@@ -850,8 +1031,8 @@
             </h3>
 
             <p>
-              Se você percebeu uma mudança na quantidade de fios
-              que caem, o primeiro passo é avaliar o seu caso.
+              Percebeu uma mudança na quantidade de fios que
+              caem e quer entender melhor o seu caso?
             </p>
 
           </article>
@@ -868,8 +1049,8 @@
             </h3>
 
             <p>
-              O afinamento percebido pode merecer uma avaliação
-              mais detalhada do couro cabeludo e dos fios.
+              Notou redução de volume ou afinamento dos fios
+              e deseja buscar orientação profissional?
             </p>
 
           </article>
@@ -882,15 +1063,16 @@
             </div>
 
             <h3>
-              Já tentou de tudo?
+              Já tentou várias opções?
             </h3>
 
             <p>
-              Antes de comprar mais produtos ou usar suplementação
-              por conta própria, converse com uma profissional.
+              Antes de continuar usando produtos ou suplementos
+              por conta própria, avalie o seu caso.
             </p>
 
           </article>
+
 
         </div>
 
@@ -900,11 +1082,17 @@
 
 
 
-    <!-- AVALIAÇÃO -->
+    <!-- =====================================================
+         AVALIAÇÃO
+    ====================================================== -->
 
-    <section class="dark-section" id="avaliacao">
+    <section
+      class="dark-section"
+      id="avaliacao"
+    >
 
       <div class="container two-columns">
+
 
         <div>
 
@@ -917,15 +1105,16 @@
           </h2>
 
           <p>
-            Um momento dedicado a conhecer seu histórico e observar
-            as características do couro cabeludo e dos fios para
-            orientar as possibilidades de cuidado.
+            O primeiro atendimento é dedicado a conhecer seu
+            histórico, suas queixas e observar as características
+            do couro cabeludo e dos fios.
           </p>
+
 
           <a
             href="#"
             class="btn btn-white whatsapp-link"
-            data-message="Olá! Vim pelo site e quero agendar a avaliação capilar com tricoscopia de R$ 100."
+            data-message="Olá! Vim pelo site do Instituto Bianca Pontes e quero agendar uma avaliação capilar com tricoscopia."
           >
             Quero agendar
           </a>
@@ -934,6 +1123,7 @@
 
 
         <div class="check-list">
+
 
           <div class="check">
 
@@ -965,11 +1155,12 @@
             <div>
 
               <strong>
-                Exame de tricoscopia
+                Tricoscopia
               </strong>
 
               <span>
-                Avaliação visual ampliada do couro cabeludo e dos fios.
+                Exame que permite observar de forma ampliada
+                características do couro cabeludo e dos fios.
               </span>
 
             </div>
@@ -986,16 +1177,18 @@
             <div>
 
               <strong>
-                Conduta individualizada
+                Avaliação individualizada
               </strong>
 
               <span>
-                As possibilidades de cuidado são discutidas conforme cada caso.
+                As possibilidades de cuidado são discutidas
+                conforme cada caso.
               </span>
 
             </div>
 
           </div>
+
 
         </div>
 
@@ -1005,29 +1198,54 @@
 
 
 
-    <!-- SOBRE BIANCA -->
+    <!-- =====================================================
+         SOBRE BIANCA
+    ====================================================== -->
 
-    <section class="about" id="bianca">
+    <section
+      class="about"
+      id="bianca"
+    >
 
       <div class="container two-columns">
 
+
         <div class="about-photo">
 
-          <div>
+          <img
+            src="img/bianca-profissional.jpg"
+            alt="Bianca Pontes, enfermeira e especialista em tricologia"
+            onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"
+          >
 
-            <div class="initials">
-              BP
+
+          <div
+            class="about-placeholder"
+            style="display:none;"
+          >
+
+            <div>
+
+              <div class="initials">
+                BP
+              </div>
+
+              <strong
+                style="
+                  display:block;
+                  font-family:Georgia,serif;
+                  font-size:27px;
+                  margin-top:15px;
+                "
+              >
+                Bianca Pontes
+              </strong>
+
+              <span>
+                Enfermeira · Tricologia e Terapia Capilar
+              </span>
+
             </div>
-
-            <strong style="font-family:Georgia,serif;font-size:27px;">
-              Bianca Pontes
-            </strong>
-
-            <br>
-
-            <span>
-              Enfermeira · Tricologia e Terapia Capilar
-            </span>
 
           </div>
 
@@ -1036,38 +1254,45 @@
 
         <div class="about-text">
 
+
           <div class="label">
             Conheça a profissional
           </div>
 
+
           <h2>
-            Experiência, responsabilidade e cuidado individualizado.
+            Experiência, responsabilidade
+            e cuidado individualizado.
           </h2>
 
-          <p>
-            Bianca Pontes é enfermeira e atua há mais de 10 anos
-            na área de transplante capilar, com experiência em
-            acompanhamento pós-operatório e tratamentos capilares.
-          </p>
 
           <p>
-            Sua formação inclui pós-graduação em estética,
-            terapia capilar e tricologia, além de especializações
+            Bianca Pontes é enfermeira e atua há mais de
+            10 anos na área de transplante capilar, com
+            experiência em acompanhamento pós-operatório
+            e tratamento capilar.
+          </p>
+
+
+          <p>
+            Possui formação e especializações em estética,
+            terapia capilar e tricologia, além de pós-graduação
             em ortomolecular e terapias integrativas e formação
             em terapia capilar.
           </p>
 
+
           <p>
-            No Instituto Bianca Pontes, o compromisso é oferecer
-            um atendimento responsável, cuidadoso e individualizado,
-            respeitando os limites de sua atuação profissional.
+            No Instituto Bianca Pontes, o atendimento busca
+            unir conhecimento, responsabilidade profissional
+            e cuidado individualizado.
           </p>
 
 
           <div class="tags">
 
             <span class="tag">
-              Enfermeira
+              Enfermagem
             </span>
 
             <span class="tag">
@@ -1096,11 +1321,14 @@
 
 
 
-    <!-- TRATAMENTOS -->
+    <!-- =====================================================
+         TRATAMENTOS
+    ====================================================== -->
 
     <section id="tratamentos">
 
       <div class="container">
+
 
         <div class="section-title">
 
@@ -1113,8 +1341,8 @@
           </h2>
 
           <p>
-            Os procedimentos e protocolos são definidos conforme
-            avaliação e indicação profissional.
+            Os procedimentos são avaliados individualmente
+            e realizados conforme indicação profissional.
           </p>
 
         </div>
@@ -1122,33 +1350,58 @@
 
         <div class="cards">
 
+
+          <!-- LED -->
+
           <article class="card">
 
-            <div class="icon">
-              LED
+            <img
+              src="img/led-capilar.jpg"
+              class="service-photo"
+              alt="Fototerapia LED capilar"
+              onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"
+            >
+
+            <div
+              class="service-placeholder"
+              style="display:none;"
+            >
+              LED Capilar
             </div>
+
 
             <h3>
               Fototerapia LED Capilar
             </h3>
 
             <p>
-              Fototerapia utilizada dentro de protocolos capilares,
-              conforme avaliação e indicação profissional.
+              Fototerapia utilizada dentro de protocolos
+              capilares, conforme avaliação e indicação
+              profissional.
             </p>
-
-            <span class="service-price">
-              Sessão: R$ 220
-            </span>
 
           </article>
 
 
+
+          <!-- MESOTERAPIA -->
+
           <article class="card">
 
-            <div class="icon">
-              MC
+            <img
+              src="img/mesoterapia-capilar.jpg"
+              class="service-photo"
+              alt="Mesoterapia capilar"
+              onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"
+            >
+
+            <div
+              class="service-placeholder"
+              style="display:none;"
+            >
+              Mesoterapia
             </div>
+
 
             <h3>
               Mesoterapia
@@ -1159,33 +1412,40 @@
               personalizados, quando indicada para o caso.
             </p>
 
-            <span class="service-price">
-              Conforme protocolo
-            </span>
-
           </article>
 
 
+
+          <!-- ACOMPANHAMENTO -->
+
           <article class="card">
 
-            <div class="icon">
-              AC
+            <img
+              src="img/tricoscopia.jpg"
+              class="service-photo"
+              alt="Tricoscopia capilar"
+              onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"
+            >
+
+            <div
+              class="service-placeholder"
+              style="display:none;"
+            >
+              Avaliação
             </div>
+
 
             <h3>
               Acompanhamento Capilar
             </h3>
 
             <p>
-              Protocolos de acompanhamento contínuo podem ser
-              estruturados conforme a necessidade de cada paciente.
+              Acompanhamento individualizado conforme as
+              necessidades observadas durante a avaliação.
             </p>
 
-            <span class="service-price">
-              Avaliação prévia
-            </span>
-
           </article>
+
 
         </div>
 
@@ -1195,11 +1455,14 @@
 
 
 
-    <!-- COMO FUNCIONA -->
+    <!-- =====================================================
+         COMO FUNCIONA
+    ====================================================== -->
 
     <section>
 
       <div class="container">
+
 
         <div class="section-title">
 
@@ -1215,6 +1478,7 @@
 
 
         <div class="cards steps">
+
 
           <article class="card">
 
@@ -1245,7 +1509,7 @@
             </h3>
 
             <p>
-              Durante a consulta, será realizada anamnese
+              Durante o atendimento, será realizada anamnese
               e tricoscopia.
             </p>
 
@@ -1281,11 +1545,12 @@
             </h3>
 
             <p>
-              Se indicado, o acompanhamento poderá seguir
-              com protocolo individualizado.
+              Quando indicado, siga com um protocolo
+              individualizado.
             </p>
 
           </article>
+
 
         </div>
 
@@ -1295,28 +1560,31 @@
 
 
 
-    <!-- OFERTA -->
+    <!-- =====================================================
+         CTA
+    ====================================================== -->
 
     <section>
 
       <div class="container">
 
+
         <div class="offer-box">
+
 
           <div>
 
             <div class="label">
-              Condição para novos pacientes
+              Primeiro passo
             </div>
 
             <h2>
-              Avaliação por R$ 100
+              Quer entender melhor o seu caso?
             </h2>
 
             <p>
-              Se você optar por iniciar seu tratamento no dia
-              da avaliação, os R$ 100 pagos serão 100% revertidos
-              como crédito no protocolo escolhido.
+              Converse com o Instituto Bianca Pontes e saiba
+              como funciona a avaliação capilar com tricoscopia.
             </p>
 
           </div>
@@ -1325,10 +1593,11 @@
           <a
             href="#"
             class="btn whatsapp-link"
-            data-message="Olá! Quero aproveitar a avaliação capilar de R$ 100 e gostaria de agendar."
+            data-message="Olá! Vim pelo site do Instituto Bianca Pontes e gostaria de saber mais sobre a avaliação capilar."
           >
-            Agendar agora →
+            Falar no WhatsApp →
           </a>
+
 
         </div>
 
@@ -1338,15 +1607,25 @@
 
 
 
-    <!-- FAQ -->
+    <!-- =====================================================
+         FAQ
+    ====================================================== -->
 
-    <section class="faq" id="faq">
+    <section
+      class="faq"
+      id="faq"
+    >
 
       <div class="container">
 
+
         <div
           class="section-title"
-          style="text-align:center;margin-left:auto;margin-right:auto;"
+          style="
+            text-align:center;
+            margin-left:auto;
+            margin-right:auto;
+          "
         >
 
           <div class="label">
@@ -1361,35 +1640,6 @@
 
 
         <div class="faq-list">
-
-
-          <details>
-
-            <summary>
-              Quanto custa a avaliação?
-            </summary>
-
-            <p>
-              A avaliação capilar com anamnese e tricoscopia
-              custa R$ 100.
-            </p>
-
-          </details>
-
-
-          <details>
-
-            <summary>
-              Os R$ 100 são descontados do tratamento?
-            </summary>
-
-            <p>
-              Sim. Se você optar por iniciar o tratamento no dia
-              da avaliação, os R$ 100 pagos são 100% revertidos
-              como crédito no protocolo escolhido.
-            </p>
-
-          </details>
 
 
           <details>
@@ -1413,8 +1663,8 @@
             </summary>
 
             <p>
-              Sim. O Instituto atende homens e mulheres interessados
-              em avaliação e cuidados capilares.
+              Sim. O Instituto atende homens e mulheres
+              interessados em avaliação e cuidados capilares.
             </p>
 
           </details>
@@ -1438,12 +1688,26 @@
           <details>
 
             <summary>
+              Preciso fazer exames?
+            </summary>
+
+            <p>
+              Quando necessário, a profissional poderá orientar
+              ou solicitar exames dentro de sua atuação profissional.
+            </p>
+
+          </details>
+
+
+          <details>
+
+            <summary>
               Onde fica o Instituto?
             </summary>
 
             <p>
-              O Instituto Bianca Pontes fica em Codó, Maranhão.
-              O endereço e o horário de atendimento podem ser
+              O Instituto Bianca Pontes está localizado em
+              Codó, Maranhão. O endereço e os horários são
               confirmados pelo WhatsApp no momento do agendamento.
             </p>
 
@@ -1458,24 +1722,31 @@
 
 
 
-    <!-- CTA FINAL -->
+    <!-- =====================================================
+         CTA FINAL
+    ====================================================== -->
 
     <section class="final">
 
       <div class="container">
 
+
         <div class="label">
           Instituto Bianca Pontes
         </div>
 
+
         <h2>
-          Seu primeiro passo pode começar com uma avaliação.
+          Seu primeiro passo pode começar
+          com uma avaliação.
         </h2>
 
+
         <p>
-          Agende sua avaliação capilar com anamnese e tricoscopia
-          em Codó-MA.
+          Converse com o Instituto Bianca Pontes e
+          agende sua avaliação capilar em Codó-MA.
         </p>
+
 
         <a
           href="#"
@@ -1485,19 +1756,24 @@
           Agendar pelo WhatsApp
         </a>
 
+
       </div>
 
     </section>
+
 
   </main>
 
 
 
-  <!-- FOOTER -->
+  <!-- =====================================================
+       FOOTER
+  ====================================================== -->
 
   <footer>
 
     <div class="container footer-content">
+
 
       <div>
 
@@ -1507,7 +1783,8 @@
 
         <br>
 
-        Tricologia · Terapia Capilar · Estética Clínica · Saúde Integrativa
+        Tricologia · Terapia Capilar ·
+        Estética Clínica · Saúde Integrativa
 
       </div>
 
@@ -1522,21 +1799,27 @@
 
       </div>
 
+
     </div>
 
 
     <div
       class="container"
-      style="margin-top:20px;padding-top:18px;border-top:1px solid rgba(255,255,255,.1)"
+      style="
+        margin-top:20px;
+        padding-top:18px;
+        border-top:1px solid rgba(255,255,255,.1)
+      "
     >
 
       As informações desta página têm caráter informativo.
-      Procedimentos e protocolos são realizados conforme avaliação
-      e indicação profissional.
+      Procedimentos e protocolos são realizados conforme
+      avaliação e indicação profissional.
 
       <br><br>
 
-      © <span id="year"></span> Instituto Bianca Pontes.
+      © <span id="year"></span>
+      Instituto Bianca Pontes.
       Todos os direitos reservados.
 
     </div>
@@ -1545,7 +1828,9 @@
 
 
 
-  <!-- BOTÃO FLUTUANTE -->
+  <!-- =====================================================
+       WHATSAPP FLUTUANTE
+  ====================================================== -->
 
   <a
     href="#"
@@ -1558,12 +1843,16 @@
 
 
 
+  <!-- =====================================================
+       JAVASCRIPT
+  ====================================================== -->
+
   <script>
 
     /*
-      ==================================================
-      WHATSAPP
-      ==================================================
+    ========================================================
+    WHATSAPP COMERCIAL
+    ========================================================
     */
 
     const WHATSAPP =
@@ -1571,13 +1860,15 @@
 
 
     /*
-      ==================================================
-      UTM
-      ==================================================
+    ========================================================
+    CAPTURA DE UTM
+    ========================================================
     */
 
     const urlParams =
-      new URLSearchParams(window.location.search);
+      new URLSearchParams(
+        window.location.search
+      );
 
 
     const utmKeys = [
@@ -1607,12 +1898,16 @@
 
 
     /*
-      Guarda a origem do usuário.
+    ========================================================
+    SALVA UTM NO NAVEGADOR
+    ========================================================
     */
 
     try {
 
-      if (Object.keys(utms).length > 0) {
+      if (
+        Object.keys(utms).length > 0
+      ) {
 
         localStorage.setItem(
           "bianca_utms",
@@ -1622,7 +1917,9 @@
       } else {
 
         const saved =
-          localStorage.getItem("bianca_utms");
+          localStorage.getItem(
+            "bianca_utms"
+          );
 
         if (saved) {
 
@@ -1636,18 +1933,17 @@
     } catch(error) {
 
       console.log(
-        "UTM storage error",
+        "Erro ao salvar UTM:",
         error
       );
 
     }
 
 
-
     /*
-      ==================================================
-      CRIA LINK WHATSAPP
-      ==================================================
+    ========================================================
+    MONTA WHATSAPP
+    ========================================================
     */
 
     function criarWhatsApp(message) {
@@ -1655,150 +1951,143 @@
       let origem = "";
 
 
-      Object.keys(utms).forEach(function(key) {
+      Object.keys(utms).forEach(
+        function(key) {
 
-        if (utms[key]) {
+          if (utms[key]) {
 
-          origem +=
-            key +
-            "=" +
-            utms[key] +
-            " | ";
+            origem +=
+              key +
+              "=" +
+              utms[key] +
+              " | ";
+
+          }
 
         }
+      );
 
-      });
 
+      /*
+      Não envia UTM para a Bianca no WhatsApp
+      se você preferir uma mensagem mais limpa.
 
-      if (origem) {
-
-        message +=
-          "\n\nOrigem da campanha: " +
-          origem;
-
-      }
-
+      A UTM continua armazenada no navegador.
+      */
 
       return (
         "https://wa.me/" +
         WHATSAPP +
         "?text=" +
-        encodeURIComponent(message)
+        encodeURIComponent(
+          message
+        )
       );
 
     }
 
 
-
     /*
-      ==================================================
-      TODOS OS BOTÕES
-      ==================================================
+    ========================================================
+    CONFIGURA TODOS OS BOTÕES
+    ========================================================
     */
 
     document
-      .querySelectorAll(".whatsapp-link")
-      .forEach(function(button) {
+      .querySelectorAll(
+        ".whatsapp-link"
+      )
+      .forEach(
+        function(button) {
 
 
-        const message =
-          button.dataset.message ||
-          "Olá! Gostaria de agendar uma avaliação capilar.";
+          const message =
+            button.dataset.message ||
+            "Olá! Gostaria de agendar uma avaliação capilar.";
 
 
-        button.href =
-          criarWhatsApp(message);
+          button.href =
+            criarWhatsApp(
+              message
+            );
 
 
-        /*
-          Evento de Lead preparado para Meta Pixel.
-        */
+          /*
+          META PIXEL
 
-        button.addEventListener(
-          "click",
-          function() {
+          Quando o Pixel estiver instalado,
+          o evento Lead será disparado.
+          */
 
-            if (
-              typeof fbq === "function"
-            ) {
+          button.addEventListener(
+            "click",
+            function() {
 
-              fbq(
-                "track",
-                "Lead",
-                {
-                  content_name:
-                    "Avaliação Capilar",
-                  content_category:
-                    "WhatsApp"
-                }
-              );
+
+              if (
+                typeof fbq === "function"
+              ) {
+
+                fbq(
+                  "track",
+                  "Lead",
+                  {
+                    content_name:
+                      "Avaliação Capilar",
+
+                    content_category:
+                      "WhatsApp"
+                  }
+                );
+
+              }
+
+
+              /*
+              GOOGLE ANALYTICS 4
+
+              Se o GA4 estiver instalado,
+              registra o clique.
+              */
+
+              if (
+                typeof gtag === "function"
+              ) {
+
+                gtag(
+                  "event",
+                  "generate_lead",
+                  {
+                    method:
+                      "WhatsApp",
+
+                    content_name:
+                      "Avaliação Capilar"
+                  }
+                );
+
+              }
 
             }
+          );
 
-
-            /*
-              Google Analytics 4
-            */
-
-            if (
-              typeof gtag === "function"
-            ) {
-
-              gtag(
-                "event",
-                "generate_lead",
-                {
-                  method:
-                    "WhatsApp",
-                  content_name:
-                    "Avaliação Capilar"
-                }
-              );
-
-            }
-
-          }
-        );
-
-      });
-
+        }
+      );
 
 
     /*
-      ==================================================
-      ANO AUTOMÁTICO
-      ==================================================
+    ========================================================
+    ANO AUTOMÁTICO
+    ========================================================
     */
 
-    document.getElementById("year")
+    document
+      .getElementById("year")
       .textContent =
       new Date().getFullYear();
 
   </script>
 
-
-  <!--
-    ==================================================
-    META PIXEL
-
-    Quando você tiver o Pixel, coloque o código oficial
-    da Meta aqui.
-
-    NÃO coloque um Pixel inventado.
-
-    ==================================================
-  -->
-
-
-  <!--
-    ==================================================
-    GOOGLE ANALYTICS 4
-
-    Quando tiver o Measurement ID, inserir o código oficial
-    do Google Analytics.
-
-    ==================================================
-  -->
 
 </body>
 </html>
