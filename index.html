@@ -1,19 +1,44 @@
 <!DOCTYPE html>
-
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Instituto Bianca Pontes | Tricologia e Terapia Capilar</title>
+  <title>Instituto Bianca Pontes | Tricologia e Terapia Capilar em Codó-MA</title>
 
-<meta
-name="description"
-content="Instituto Bianca Pontes em Codó-MA. Avaliação capilar individualizada com anamnese e tricoscopia. Atendimento para homens e mulheres."
-
->
+  <meta
+    name="description"
+    content="Instituto Bianca Pontes em Codó-MA. Avaliação capilar individualizada com anamnese e tricoscopia. Atendimento para homens e mulheres."
+  >
 
   <meta name="theme-color" content="#123d35">
+  <link rel="canonical" href="https://institutobiancapontes.com.br/">
+  <link rel="icon" type="image/png" href="img/logo.png">
+
+  <!-- Open Graph / redes sociais -->
+  <meta property="og:type" content="business.business">
+  <meta property="og:title" content="Instituto Bianca Pontes | Tricologia e Terapia Capilar">
+  <meta property="og:description" content="Avaliação capilar individualizada com anamnese e tricoscopia em Codó-MA. Atendimento para homens e mulheres.">
+  <meta property="og:image" content="img/bianca-hero.jpg">
+  <meta property="og:locale" content="pt_BR">
+
+  <!-- Dados estruturados: negócio local -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "MedicalBusiness",
+    "name": "Instituto Bianca Pontes",
+    "description": "Avaliação capilar individualizada com anamnese e tricoscopia. Tricologia e terapia capilar.",
+    "image": "img/bianca-hero.jpg",
+    "telephone": "+5599985155084",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Codó",
+      "addressRegion": "MA",
+      "addressCountry": "BR"
+    }
+  }
+  </script>
 
   <style>
     * {
@@ -36,6 +61,17 @@ content="Instituto Bianca Pontes em Codó-MA. Avaliação capilar individualizad
 
     html {
       scroll-behavior: smooth;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+      * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
     }
 
     body {
@@ -70,7 +106,7 @@ content="Instituto Bianca Pontes em Codó-MA. Avaliação capilar individualizad
 
     nav {
       height: 74px;
-      background: rgba(250,248,243,.97);
+      background: rgba(250, 248, 243, .97);
       border-bottom: 1px solid var(--borda);
       display: flex;
       align-items: center;
@@ -139,11 +175,19 @@ content="Instituto Bianca Pontes em Codó-MA. Avaliação capilar individualizad
       font-weight: bold;
       transition: .2s;
       cursor: pointer;
+      border: 2px solid transparent;
     }
 
     .btn:hover {
       background: var(--verde-claro);
       transform: translateY(-2px);
+    }
+
+    .btn:focus-visible,
+    a:focus-visible,
+    summary:focus-visible {
+      outline: 3px solid var(--dourado);
+      outline-offset: 3px;
     }
 
     .btn-white {
@@ -160,7 +204,7 @@ content="Instituto Bianca Pontes em Codó-MA. Avaliação capilar individualizad
       background:
         radial-gradient(
           circle at 85% 20%,
-          rgba(196,154,90,.15),
+          rgba(196, 154, 90, .15),
           transparent 30%
         ),
         linear-gradient(
@@ -242,7 +286,7 @@ content="Instituto Bianca Pontes em Codó-MA. Avaliação capilar individualizad
       min-height: 550px;
       border-radius: 32px;
       overflow: hidden;
-      background: linear-gradient(145deg,#123d35,#2a6455);
+      background: linear-gradient(145deg, #123d35, #2a6455);
     }
 
     .hero-photo img {
@@ -267,7 +311,7 @@ content="Instituto Bianca Pontes em Codó-MA. Avaliação capilar individualizad
     .initials {
       width: 145px;
       height: 145px;
-      border: 1px solid rgba(255,255,255,.35);
+      border: 1px solid rgba(255, 255, 255, .35);
       border-radius: 50%;
       display: flex;
       justify-content: center;
@@ -286,7 +330,7 @@ content="Instituto Bianca Pontes em Codó-MA. Avaliação capilar individualizad
 
     .hero-placeholder span {
       font-size: 13px;
-      color: rgba(255,255,255,.75);
+      color: rgba(255, 255, 255, .75);
     }
 
     section {
@@ -309,7 +353,7 @@ content="Instituto Bianca Pontes em Codó-MA. Avaliação capilar individualizad
     h2 {
       font-family: Georgia, serif;
       color: var(--verde);
-      font-size: clamp(32px,4vw,48px);
+      font-size: clamp(32px, 4vw, 48px);
       line-height: 1.12;
       margin: 8px 0;
     }
@@ -321,7 +365,7 @@ content="Instituto Bianca Pontes em Codó-MA. Avaliação capilar individualizad
 
     .cards {
       display: grid;
-      grid-template-columns: repeat(3,1fr);
+      grid-template-columns: repeat(3, 1fr);
       gap: 18px;
     }
 
@@ -374,7 +418,7 @@ content="Instituto Bianca Pontes em Codó-MA. Avaliação capilar individualizad
     }
 
     .dark-section p {
-      color: rgba(255,255,255,.75);
+      color: rgba(255, 255, 255, .75);
       margin: 15px 0 25px;
     }
 
@@ -387,15 +431,15 @@ content="Instituto Bianca Pontes em Codó-MA. Avaliação capilar individualizad
       display: flex;
       gap: 13px;
       padding: 17px;
-      background: rgba(255,255,255,.07);
-      border: 1px solid rgba(255,255,255,.12);
+      background: rgba(255, 255, 255, .07);
+      border: 1px solid rgba(255, 255, 255, .12);
       border-radius: 15px;
     }
 
     .check-icon {
       width: 25px;
       height: 25px;
-      background: rgba(255,255,255,.15);
+      background: rgba(255, 255, 255, .15);
       border-radius: 50%;
       display: flex;
       align-items: center;
@@ -409,7 +453,7 @@ content="Instituto Bianca Pontes em Codó-MA. Avaliação capilar individualizad
 
     .check span {
       display: block;
-      color: rgba(255,255,255,.7);
+      color: rgba(255, 255, 255, .7);
       font-size: 13px;
     }
 
@@ -421,7 +465,7 @@ content="Instituto Bianca Pontes em Codó-MA. Avaliação capilar individualizad
       min-height: 500px;
       border-radius: 30px;
       overflow: hidden;
-      background: linear-gradient(145deg,#123d35,#2b6556);
+      background: linear-gradient(145deg, #123d35, #2b6556);
     }
 
     .about-photo img {
@@ -482,7 +526,7 @@ content="Instituto Bianca Pontes em Codó-MA. Avaliação capilar individualizad
 
     .steps {
       display: grid;
-      grid-template-columns: repeat(4,1fr);
+      grid-template-columns: repeat(4, 1fr);
       gap: 18px;
     }
 
@@ -494,7 +538,7 @@ content="Instituto Bianca Pontes em Codó-MA. Avaliação capilar individualizad
     }
 
     .offer-box {
-      background: linear-gradient(135deg,#eef5f1,#fff);
+      background: linear-gradient(135deg, #eef5f1, #fff);
       border: 1px solid var(--borda);
       border-radius: 30px;
       padding: 42px;
@@ -555,12 +599,12 @@ content="Instituto Bianca Pontes em Codó-MA. Avaliação capilar individualizad
     .final p {
       max-width: 600px;
       margin: 15px auto 25px;
-      color: rgba(255,255,255,.75);
+      color: rgba(255, 255, 255, .75);
     }
 
     footer {
       background: #0b2c26;
-      color: rgba(255,255,255,.7);
+      color: rgba(255, 255, 255, .7);
       padding: 30px 0 90px;
       font-size: 12px;
     }
@@ -578,6 +622,10 @@ content="Instituto Bianca Pontes em Codó-MA. Avaliação capilar individualizad
       font-size: 18px;
     }
 
+    footer a {
+      color: inherit;
+    }
+
     .whatsapp-float {
       position: fixed;
       right: 18px;
@@ -593,11 +641,12 @@ content="Instituto Bianca Pontes em Codó-MA. Avaliação capilar individualizad
       font-size: 25px;
       font-weight: bold;
       z-index: 999;
-      box-shadow: 0 10px 30px rgba(0,0,0,.25);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, .25);
       border: 3px solid white;
     }
 
-    @media(max-width:850px) {
+    @media (max-width:850px) {
+
       .hero-grid,
       .two-columns {
         grid-template-columns: 1fr;
@@ -636,7 +685,7 @@ content="Instituto Bianca Pontes em Codó-MA. Avaliação capilar individualizad
       }
     }
 
-    @media(max-width:560px) {
+    @media (max-width:560px) {
       .container {
         width: calc(100% - 24px);
       }
@@ -719,813 +768,815 @@ content="Instituto Bianca Pontes em Codó-MA. Avaliação capilar individualizad
   <nav>
     <div class="container nav-content">
 
-```
-  <a href="#inicio" class="logo-area">
+      <a href="#inicio" class="logo-area">
 
-    <!-- IMAGEM CORRETA -->
-    <img
-      src="/intitutobianca/img/logo.png"
-      class="logo"
-      alt="Instituto Bianca Pontes"
-      onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"
-    >
+        <img
+          src="img/logo.png"
+          class="logo"
+          alt="Instituto Bianca Pontes"
+          width="43"
+          height="43"
+          onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"
+        >
 
-    <div class="logo-fallback" style="display:none;">
-      B
+        <div class="logo-fallback" style="display:none;">
+          B
+        </div>
+
+        <div class="logo-text">
+          <strong>Instituto Bianca Pontes</strong>
+          <span>Tricologia · Terapia Capilar · Saúde</span>
+        </div>
+
+      </a>
+
+      <a
+        href="#"
+        class="btn nav-btn whatsapp-link"
+        target="_blank"
+        rel="noopener noreferrer"
+        data-message="Olá! Vim pelo site do Instituto Bianca Pontes e gostaria de agendar uma avaliação capilar."
+      >
+        Agendar avaliação
+      </a>
+
     </div>
-
-    <div class="logo-text">
-      <strong>Instituto Bianca Pontes</strong>
-      <span>Tricologia · Terapia Capilar · Saúde</span>
-    </div>
-
-  </a>
-
-  <a
-    href="#"
-    class="btn nav-btn whatsapp-link"
-    data-message="Olá! Vim pelo site do Instituto Bianca Pontes e gostaria de agendar uma avaliação capilar."
-  >
-    Agendar avaliação
-  </a>
-
-</div>
-```
-
   </nav>
 
   <main>
+    <section class="hero" id="inicio">
 
-```
-<section class="hero" id="inicio">
+      <div class="container hero-grid">
 
-  <div class="container hero-grid">
+        <div>
 
-    <div>
+          <span class="badge">
+            Avaliação capilar em Codó-MA
+          </span>
 
-      <span class="badge">
-        Avaliação capilar em Codó-MA
-      </span>
+          <h1>
+            Queda ou afinamento dos fios?
+            Comece pela avaliação.
+          </h1>
 
-      <h1>
-        Queda ou afinamento dos fios?
-        Comece pela avaliação.
-      </h1>
+          <p class="hero-text">
+            Um atendimento individualizado começa entendendo
+            o seu caso. Avalie seu histórico, couro cabeludo
+            e fios com uma profissional especializada em
+            tricologia e terapia capilar.
+          </p>
 
-      <p class="hero-text">
-        Um atendimento individualizado começa entendendo
-        o seu caso. Avalie seu histórico, couro cabeludo
-        e fios com uma profissional especializada em
-        tricologia e terapia capilar.
-      </p>
+          <div class="hero-benefits">
 
-      <div class="hero-benefits">
+            <div class="hero-benefit">
+              <span aria-hidden="true">✓</span>
+              Atendimento individualizado
+            </div>
 
-        <div class="hero-benefit">
-          <span>✓</span>
-          Atendimento individualizado
-        </div>
+            <div class="hero-benefit">
+              <span aria-hidden="true">✓</span>
+              Anamnese detalhada
+            </div>
 
-        <div class="hero-benefit">
-          <span>✓</span>
-          Anamnese detalhada
-        </div>
+            <div class="hero-benefit">
+              <span aria-hidden="true">✓</span>
+              Exame de tricoscopia
+            </div>
 
-        <div class="hero-benefit">
-          <span>✓</span>
-          Exame de tricoscopia
-        </div>
+            <div class="hero-benefit">
+              <span aria-hidden="true">✓</span>
+              Atendimento para homens e mulheres
+            </div>
 
-        <div class="hero-benefit">
-          <span>✓</span>
-          Atendimento para homens e mulheres
-        </div>
-
-      </div>
-
-      <a
-        href="#"
-        class="btn whatsapp-link"
-        data-message="Olá! Vim pelo site do Instituto Bianca Pontes e gostaria de agendar uma avaliação capilar com tricoscopia."
-      >
-        Quero agendar minha avaliação →
-      </a>
-
-      <p class="hero-small">
-        📍 Codó-MA · Atendimento mediante agendamento
-      </p>
-
-    </div>
-
-    <div class="hero-photo">
-
-      <!-- IMAGEM CORRETA -->
-      <img
-        src="/intitutobianca/img/bianca-hero.jpg"
-        alt="Bianca Pontes - Instituto Bianca Pontes"
-        onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"
-      >
-
-      <div class="hero-placeholder" style="display:none;">
-
-        <div class="photo-placeholder-content">
-
-          <div class="initials">
-            BP
           </div>
 
-          <strong>
-            Bianca Pontes
-          </strong>
-
-          <span>
-            Enfermeira · Tricologia e Terapia Capilar
-          </span>
-
-        </div>
-
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
-
-<section>
-
-  <div class="container">
-
-    <div class="section-title">
-
-      <div class="label">
-        Comece pelo primeiro passo
-      </div>
-
-      <h2>
-        O que mudou no seu cabelo?
-      </h2>
-
-      <p>
-        Queda e afinamento dos fios podem estar relacionados
-        a diferentes fatores. Por isso, cada pessoa precisa
-        ser observada de forma individualizada.
-      </p>
-
-    </div>
-
-    <div class="cards">
-
-      <article class="card">
-
-        <div class="icon">
-          01
-        </div>
-
-        <h3>
-          Queda dos fios
-        </h3>
-
-        <p>
-          Percebeu uma mudança na quantidade de fios que
-          caem e quer entender melhor o seu caso?
-        </p>
-
-      </article>
-
-      <article class="card">
-
-        <div class="icon">
-          02
-        </div>
-
-        <h3>
-          Fios mais finos
-        </h3>
-
-        <p>
-          Notou redução de volume ou afinamento dos fios
-          e deseja buscar orientação profissional?
-        </p>
-
-      </article>
-
-      <article class="card">
-
-        <div class="icon">
-          03
-        </div>
-
-        <h3>
-          Já tentou várias opções?
-        </h3>
-
-        <p>
-          Antes de continuar usando produtos ou suplementos
-          por conta própria, avalie o seu caso.
-        </p>
-
-      </article>
-
-    </div>
-
-  </div>
-
-</section>
-
-<section class="dark-section" id="avaliacao">
-
-  <div class="container two-columns">
-
-    <div>
-
-      <div class="label">
-        Porta de entrada
-      </div>
-
-      <h2>
-        Avaliação Capilar + Tricoscopia
-      </h2>
-
-      <p>
-        O primeiro atendimento é dedicado a conhecer seu
-        histórico, suas queixas e observar as características
-        do couro cabeludo e dos fios.
-      </p>
-
-      <a
-        href="#"
-        class="btn btn-white whatsapp-link"
-        data-message="Olá! Vim pelo site do Instituto Bianca Pontes e quero agendar uma avaliação capilar com tricoscopia."
-      >
-        Quero agendar
-      </a>
-
-    </div>
-
-    <div class="check-list">
-
-      <div class="check">
-
-        <div class="check-icon">
-          ✓
-        </div>
-
-        <div>
-          <strong>
-            Anamnese detalhada
-          </strong>
-
-          <span>
-            Conhecimento do histórico e das principais queixas.
-          </span>
-        </div>
-
-      </div>
-
-      <div class="check">
-
-        <div class="check-icon">
-          ✓
-        </div>
-
-        <div>
-
-          <strong>
-            Tricoscopia
-          </strong>
-
-          <span>
-            Exame que permite observar de forma ampliada
-            características do couro cabeludo e dos fios.
-          </span>
-
-        </div>
-
-      </div>
-
-      <div class="check">
-
-        <div class="check-icon">
-          ✓
-        </div>
-
-        <div>
-
-          <strong>
-            Avaliação individualizada
-          </strong>
-
-          <span>
-            As possibilidades de cuidado são discutidas
-            conforme cada caso.
-          </span>
-
-        </div>
-
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
-
-<section class="about" id="bianca">
-
-  <div class="container two-columns">
-
-    <div class="about-photo">
-
-      <!-- IMAGEM CORRETA -->
-      <img
-        src="/intitutobianca/img/bianca-profissional.jpg"
-        alt="Bianca Pontes, enfermeira e especialista em tricologia"
-        onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"
-      >
-
-      <div class="about-placeholder" style="display:none;">
-
-        <div>
-
-          <div class="initials">
-            BP
-          </div>
-
-          <strong
-            style="
-              display:block;
-              font-family:Georgia,serif;
-              font-size:27px;
-              margin-top:15px;
-            "
+          <a
+            href="#"
+            class="btn whatsapp-link"
+            target="_blank"
+            rel="noopener noreferrer"
+            data-message="Olá! Vim pelo site do Instituto Bianca Pontes e gostaria de agendar uma avaliação capilar com tricoscopia."
           >
-            Bianca Pontes
-          </strong>
+            Quero agendar minha avaliação →
+          </a>
 
-          <span>
-            Enfermeira · Tricologia e Terapia Capilar
-          </span>
+          <p class="hero-small">
+            📍 Codó-MA · Atendimento mediante agendamento
+          </p>
+
+        </div>
+
+        <div class="hero-photo">
+
+          <img
+            src="img/bianca-hero.jpg"
+            alt="Bianca Pontes - Instituto Bianca Pontes"
+            width="600"
+            height="550"
+            fetchpriority="high"
+            onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"
+          >
+
+          <div class="hero-placeholder" style="display:none;">
+
+            <div class="photo-placeholder-content">
+
+              <div class="initials">
+                BP
+              </div>
+
+              <strong>
+                Bianca Pontes
+              </strong>
+
+              <span>
+                Enfermeira · Tricologia e Terapia Capilar
+              </span>
+
+            </div>
+
+          </div>
 
         </div>
 
       </div>
 
-    </div>
+    </section>
 
-    <div class="about-text">
+    <section>
 
-      <div class="label">
-        Conheça a profissional
+      <div class="container">
+
+        <div class="section-title">
+
+          <div class="label">
+            Comece pelo primeiro passo
+          </div>
+
+          <h2>
+            O que mudou no seu cabelo?
+          </h2>
+
+          <p>
+            Queda e afinamento dos fios podem estar relacionados
+            a diferentes fatores. Por isso, cada pessoa precisa
+            ser observada de forma individualizada.
+          </p>
+
+        </div>
+
+        <div class="cards">
+
+          <article class="card">
+
+            <div class="icon" aria-hidden="true">
+              01
+            </div>
+
+            <h3>
+              Queda dos fios
+            </h3>
+
+            <p>
+              Percebeu uma mudança na quantidade de fios que
+              caem e quer entender melhor o seu caso?
+            </p>
+
+          </article>
+
+          <article class="card">
+
+            <div class="icon" aria-hidden="true">
+              02
+            </div>
+
+            <h3>
+              Fios mais finos
+            </h3>
+
+            <p>
+              Notou redução de volume ou afinamento dos fios
+              e deseja buscar orientação profissional?
+            </p>
+
+          </article>
+
+          <article class="card">
+
+            <div class="icon" aria-hidden="true">
+              03
+            </div>
+
+            <h3>
+              Já tentou várias opções?
+            </h3>
+
+            <p>
+              Antes de continuar usando produtos ou suplementos
+              por conta própria, avalie o seu caso.
+            </p>
+
+          </article>
+
+        </div>
+
       </div>
 
-      <h2>
-        Experiência, responsabilidade
-        e cuidado individualizado.
-      </h2>
+    </section>
 
-      <p>
-        Bianca Pontes é enfermeira e atua há mais de
-        10 anos na área de transplante capilar, com
-        experiência em acompanhamento pós-operatório
-        e tratamento capilar.
-      </p>
+    <section class="dark-section" id="avaliacao">
 
-      <p>
-        Possui formação e especializações em estética,
-        terapia capilar e tricologia, além de pós-graduação
-        em ortomolecular e terapias integrativas e formação
-        em terapia capilar.
-      </p>
+      <div class="container two-columns">
 
-      <p>
-        No Instituto Bianca Pontes, o atendimento busca
-        unir conhecimento, responsabilidade profissional
-        e cuidado individualizado.
-      </p>
+        <div>
 
-      <div class="tags">
+          <div class="label">
+            Porta de entrada
+          </div>
 
-        <span class="tag">Enfermagem</span>
-        <span class="tag">Tricologia</span>
-        <span class="tag">Terapia Capilar</span>
-        <span class="tag">Estética Clínica</span>
-        <span class="tag">Saúde Integrativa</span>
+          <h2>
+            Avaliação Capilar + Tricoscopia
+          </h2>
+
+          <p>
+            O primeiro atendimento é dedicado a conhecer seu
+            histórico, suas queixas e observar as características
+            do couro cabeludo e dos fios.
+          </p>
+
+          <a
+            href="#"
+            class="btn btn-white whatsapp-link"
+            target="_blank"
+            rel="noopener noreferrer"
+            data-message="Olá! Vim pelo site do Instituto Bianca Pontes e quero agendar uma avaliação capilar com tricoscopia."
+          >
+            Quero agendar
+          </a>
+
+        </div>
+
+        <div class="check-list">
+
+          <div class="check">
+
+            <div class="check-icon" aria-hidden="true">
+              ✓
+            </div>
+
+            <div>
+              <strong>
+                Anamnese detalhada
+              </strong>
+
+              <span>
+                Conhecimento do histórico e das principais queixas.
+              </span>
+            </div>
+
+          </div>
+
+          <div class="check">
+
+            <div class="check-icon" aria-hidden="true">
+              ✓
+            </div>
+
+            <div>
+
+              <strong>
+                Tricoscopia
+              </strong>
+
+              <span>
+                Exame que permite observar de forma ampliada
+                características do couro cabeludo e dos fios.
+              </span>
+
+            </div>
+
+          </div>
+
+          <div class="check">
+
+            <div class="check-icon" aria-hidden="true">
+              ✓
+            </div>
+
+            <div>
+
+              <strong>
+                Avaliação individualizada
+              </strong>
+
+              <span>
+                As possibilidades de cuidado são discutidas
+                conforme cada caso.
+              </span>
+            </div>
+
+          </div>
+
+        </div>
 
       </div>
 
-    </div>
+    </section>
 
-  </div>
+    <section class="about" id="bianca">
 
-</section>
+      <div class="container two-columns">
 
-<section id="tratamentos">
+        <div class="about-photo">
 
-  <div class="container">
+          <img
+            src="img/bianca-profissional.jpg"
+            alt="Bianca Pontes, enfermeira e especialista em tricologia"
+            width="500"
+            height="500"
+            loading="lazy"
+            onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"
+          >
 
-    <div class="section-title">
+          <div class="about-placeholder" style="display:none;">
 
-      <div class="label">
-        Possibilidades de cuidado
+            <div>
+
+              <div class="initials">
+                BP
+              </div>
+
+              <strong
+                style="
+                  display:block;
+                  font-family:Georgia,serif;
+                  font-size:27px;
+                  margin-top:15px;
+                "
+              >
+                Bianca Pontes
+              </strong>
+
+              <span>
+                Enfermeira · Tricologia e Terapia Capilar
+              </span>
+
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="about-text">
+
+          <div class="label">
+            Conheça a profissional
+          </div>
+
+          <h2>
+            Experiência, responsabilidade
+            e cuidado individualizado.
+          </h2>
+
+          <p>
+            Bianca Pontes é enfermeira e atua há mais de
+            10 anos na área de transplante capilar, com
+            experiência em acompanhamento pós-operatório
+            e tratamento capilar.
+          </p>
+
+          <p>
+            Possui formação e especializações em estética,
+            terapia capilar e tricologia, além de pós-graduação
+            em ortomolecular e terapias integrativas e formação
+            em terapia capilar.
+          </p>
+
+          <p>
+            No Instituto Bianca Pontes, o atendimento busca
+            unir conhecimento, responsabilidade profissional
+            e cuidado individualizado.
+          </p>
+
+          <div class="tags">
+
+            <span class="tag">Enfermagem</span>
+            <span class="tag">Tricologia</span>
+            <span class="tag">Terapia Capilar</span>
+            <span class="tag">Estética Clínica</span>
+            <span class="tag">Saúde Integrativa</span>
+
+          </div>
+
+        </div>
+
       </div>
 
-      <h2>
-        Protocolos capilares individualizados.
-      </h2>
+    </section>
 
-      <p>
-        Os procedimentos são avaliados individualmente
-        e realizados conforme indicação profissional.
-      </p>
+    <section id="tratamentos">
 
-    </div>
+      <div class="container">
 
-    <div class="cards">
+        <div class="section-title">
 
-      <article class="card">
+          <div class="label">
+            Possibilidades de cuidado
+          </div>
 
-        <!-- IMAGEM SERÁ ADICIONADA DEPOIS -->
-        <div class="service-placeholder">
-          LED Capilar
+          <h2>
+            Protocolos capilares individualizados.
+          </h2>
+
+          <p>
+            Os procedimentos são avaliados individualmente
+            e realizados conforme indicação profissional.
+          </p>
+
         </div>
 
-        <h3>
-          Fototerapia LED Capilar
-        </h3>
+        <div class="cards">
 
-        <p>
-          Fototerapia utilizada dentro de protocolos
-          capilares, conforme avaliação e indicação
-          profissional.
-        </p>
+          <article class="card">
 
-      </article>
+            <!-- IMAGEM SERÁ ADICIONADA DEPOIS -->
+            <div class="service-placeholder">
+              LED Capilar
+            </div>
 
-      <article class="card">
+            <h3>
+              Fototerapia LED Capilar
+            </h3>
 
-        <!-- IMAGEM SERÁ ADICIONADA DEPOIS -->
-        <div class="service-placeholder">
-          Mesoterapia
+            <p>
+              Fototerapia utilizada dentro de protocolos
+              capilares, conforme avaliação e indicação
+              profissional.
+            </p>
+
+          </article>
+
+          <article class="card">
+
+            <!-- IMAGEM SERÁ ADICIONADA DEPOIS -->
+            <div class="service-placeholder">
+              Mesoterapia
+            </div>
+
+            <h3>
+              Mesoterapia
+            </h3>
+
+            <p>
+              Aplicação intradérmica de ativos em protocolos
+              personalizados, quando indicada para o caso.
+            </p>
+
+          </article>
+
+          <article class="card">
+
+            <!-- IMAGEM SERÁ ADICIONADA DEPOIS -->
+            <div class="service-placeholder">
+              Avaliação
+            </div>
+
+            <h3>
+              Acompanhamento Capilar
+            </h3>
+
+            <p>
+              Acompanhamento individualizado conforme as
+              necessidades observadas durante a avaliação.
+            </p>
+
+          </article>
+
         </div>
 
-        <h3>
-          Mesoterapia
-        </h3>
-
-        <p>
-          Aplicação intradérmica de ativos em protocolos
-          personalizados, quando indicada para o caso.
-        </p>
-
-      </article>
-
-      <article class="card">
-
-        <!-- IMAGEM SERÁ ADICIONADA DEPOIS -->
-        <div class="service-placeholder">
-          Avaliação
-        </div>
-
-        <h3>
-          Acompanhamento Capilar
-        </h3>
-
-        <p>
-          Acompanhamento individualizado conforme as
-          necessidades observadas durante a avaliação.
-        </p>
-
-      </article>
-
-    </div>
-
-  </div>
-
-</section>
-
-<section>
-
-  <div class="container">
-
-    <div class="section-title">
-
-      <div class="label">
-        Simples e individualizado
       </div>
 
-      <h2>
-        Como funciona?
-      </h2>
+    </section>
 
-    </div>
+    <section>
 
-    <div class="cards steps">
+      <div class="container">
 
-      <article class="card">
+        <div class="section-title">
 
-        <div class="number">
-          01
+          <div class="label">
+            Simples e individualizado
+          </div>
+
+          <h2>
+            Como funciona?
+          </h2>
+
         </div>
 
-        <h3>
-          Agende
-        </h3>
+        <div class="cards steps">
 
-        <p>
-          Entre em contato pelo WhatsApp e escolha
-          o melhor horário.
-        </p>
+          <article class="card">
 
-      </article>
+            <div class="number" aria-hidden="true">
+              01
+            </div>
 
-      <article class="card">
+            <h3>
+              Agende
+            </h3>
 
-        <div class="number">
-          02
+            <p>
+              Entre em contato pelo WhatsApp e escolha
+              o melhor horário.
+            </p>
+
+          </article>
+
+          <article class="card">
+
+            <div class="number" aria-hidden="true">
+              02
+            </div>
+
+            <h3>
+              Avalie
+            </h3>
+
+            <p>
+              Durante o atendimento, será realizada anamnese
+              e tricoscopia.
+            </p>
+
+          </article>
+
+          <article class="card">
+
+            <div class="number" aria-hidden="true">
+              03
+            </div>
+
+            <h3>
+              Entenda
+            </h3>
+
+            <p>
+              Converse sobre as características observadas
+              e as possibilidades de cuidado.
+            </p>
+
+          </article>
+
+          <article class="card">
+
+            <div class="number" aria-hidden="true">
+              04
+            </div>
+
+            <h3>
+              Acompanhe
+            </h3>
+
+            <p>
+              Quando indicado, siga com um protocolo
+              individualizado.
+            </p>
+
+          </article>
+
         </div>
 
-        <h3>
-          Avalie
-        </h3>
+      </div>
 
-        <p>
-          Durante o atendimento, será realizada anamnese
-          e tricoscopia.
-        </p>
+    </section>
 
-      </article>
+    <section>
 
-      <article class="card">
+      <div class="container">
 
-        <div class="number">
-          03
+        <div class="offer-box">
+
+          <div>
+
+            <div class="label">
+              Primeiro passo
+            </div>
+
+            <h2>
+              Quer entender melhor o seu caso?
+            </h2>
+
+            <p>
+              Converse com o Instituto Bianca Pontes e saiba
+              como funciona a avaliação capilar com tricoscopia.
+            </p>
+
+          </div>
+
+          <a
+            href="#"
+            class="btn whatsapp-link"
+            target="_blank"
+            rel="noopener noreferrer"
+            data-message="Olá! Vim pelo site do Instituto Bianca Pontes e gostaria de saber mais sobre a avaliação capilar."
+          >
+            Falar no WhatsApp →
+          </a>
+
         </div>
 
-        <h3>
-          Entenda
-        </h3>
+      </div>
 
-        <p>
-          Converse sobre as características observadas
-          e as possibilidades de cuidado.
-        </p>
+    </section>
 
-      </article>
+    <section class="faq" id="faq">
 
-      <article class="card">
+      <div class="container">
 
-        <div class="number">
-          04
+        <div
+          class="section-title"
+          style="text-align:center;margin-left:auto;margin-right:auto;"
+        >
+
+          <div class="label">
+            Dúvidas frequentes
+          </div>
+
+          <h2>
+            Antes de agendar
+          </h2>
+
         </div>
 
-        <h3>
-          Acompanhe
-        </h3>
+        <div class="faq-list">
 
-        <p>
-          Quando indicado, siga com um protocolo
-          individualizado.
-        </p>
+          <details>
 
-      </article>
+            <summary>
+              A avaliação inclui tricoscopia?
+            </summary>
 
-    </div>
+            <p>
+              Sim. A avaliação inclui anamnese detalhada
+              e exame de tricoscopia.
+            </p>
 
-  </div>
+          </details>
 
-</section>
+          <details>
 
-<section>
+            <summary>
+              Atende homens e mulheres?
+            </summary>
 
-  <div class="container">
+            <p>
+              Sim. O Instituto atende homens e mulheres
+              interessados em avaliação e cuidados capilares.
+            </p>
 
-    <div class="offer-box">
+          </details>
 
-      <div>
+          <details>
+
+            <summary>
+              O tratamento é igual para todo mundo?
+            </summary>
+
+            <p>
+              Não. As possibilidades de cuidado são avaliadas
+              individualmente, de acordo com o histórico e
+              as características observadas.
+            </p>
+
+          </details>
+
+          <details>
+
+            <summary>
+              Preciso fazer exames?
+            </summary>
+
+            <p>
+              Quando necessário, a profissional poderá orientar
+              ou solicitar exames dentro de sua atuação profissional.
+            </p>
+
+          </details>
+
+          <details>
+
+            <summary>
+              Onde fica o Instituto?
+            </summary>
+
+            <p>
+              O Instituto Bianca Pontes está localizado em
+              Codó, Maranhão. O endereço e os horários são
+              confirmados pelo WhatsApp no momento do agendamento.
+            </p>
+
+          </details>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <section class="final">
+
+      <div class="container">
 
         <div class="label">
-          Primeiro passo
+          Instituto Bianca Pontes
         </div>
 
         <h2>
-          Quer entender melhor o seu caso?
+          Seu primeiro passo pode começar
+          com uma avaliação.
         </h2>
 
         <p>
-          Converse com o Instituto Bianca Pontes e saiba
-          como funciona a avaliação capilar com tricoscopia.
+          Converse com o Instituto Bianca Pontes e
+          agende sua avaliação capilar em Codó-MA.
         </p>
+
+        <a
+          href="#"
+          class="btn btn-white whatsapp-link"
+          target="_blank"
+          rel="noopener noreferrer"
+          data-message="Olá! Vim pelo site do Instituto Bianca Pontes e gostaria de agendar uma avaliação capilar com tricoscopia."
+        >
+          Agendar pelo WhatsApp
+        </a>
 
       </div>
 
-      <a
-        href="#"
-        class="btn whatsapp-link"
-        data-message="Olá! Vim pelo site do Instituto Bianca Pontes e gostaria de saber mais sobre a avaliação capilar."
-      >
-        Falar no WhatsApp →
-      </a>
-
-    </div>
-
-  </div>
-
-</section>
-
-<section class="faq" id="faq">
-
-  <div class="container">
-
-    <div
-      class="section-title"
-      style="text-align:center;margin-left:auto;margin-right:auto;"
-    >
-
-      <div class="label">
-        Dúvidas frequentes
-      </div>
-
-      <h2>
-        Antes de agendar
-      </h2>
-
-    </div>
-
-    <div class="faq-list">
-
-      <details>
-
-        <summary>
-          A avaliação inclui tricoscopia?
-        </summary>
-
-        <p>
-          Sim. A avaliação inclui anamnese detalhada
-          e exame de tricoscopia.
-        </p>
-
-      </details>
-
-      <details>
-
-        <summary>
-          Atende homens e mulheres?
-        </summary>
-
-        <p>
-          Sim. O Instituto atende homens e mulheres
-          interessados em avaliação e cuidados capilares.
-        </p>
-
-      </details>
-
-      <details>
-
-        <summary>
-          O tratamento é igual para todo mundo?
-        </summary>
-
-        <p>
-          Não. As possibilidades de cuidado são avaliadas
-          individualmente, de acordo com o histórico e
-          as características observadas.
-        </p>
-
-      </details>
-
-      <details>
-
-        <summary>
-          Preciso fazer exames?
-        </summary>
-
-        <p>
-          Quando necessário, a profissional poderá orientar
-          ou solicitar exames dentro de sua atuação profissional.
-        </p>
-
-      </details>
-
-      <details>
-
-        <summary>
-          Onde fica o Instituto?
-        </summary>
-
-        <p>
-          O Instituto Bianca Pontes está localizado em
-          Codó, Maranhão. O endereço e os horários são
-          confirmados pelo WhatsApp no momento do agendamento.
-        </p>
-
-      </details>
-
-    </div>
-
-  </div>
-
-</section>
-
-<section class="final">
-
-  <div class="container">
-
-    <div class="label">
-      Instituto Bianca Pontes
-    </div>
-
-    <h2>
-      Seu primeiro passo pode começar
-      com uma avaliação.
-    </h2>
-
-    <p>
-      Converse com o Instituto Bianca Pontes e
-      agende sua avaliação capilar em Codó-MA.
-    </p>
-
-    <a
-      href="#"
-      class="btn btn-white whatsapp-link"
-      data-message="Olá! Vim pelo site do Instituto Bianca Pontes e gostaria de agendar uma avaliação capilar com tricoscopia."
-    >
-      Agendar pelo WhatsApp
-    </a>
-
-  </div>
-
-</section>
-```
-
+    </section>
   </main>
 
   <footer>
 
-```
-<div class="container footer-content">
+    <div class="container footer-content">
 
-  <div>
+      <div>
 
-    <strong>
-      Instituto Bianca Pontes
-    </strong>
+        <strong>
+          Instituto Bianca Pontes
+        </strong>
 
-    <br>
+        <br>
 
-    Tricologia · Terapia Capilar ·
-    Estética Clínica · Saúde Integrativa
+        Tricologia · Terapia Capilar ·
+        Estética Clínica · Saúde Integrativa
 
-  </div>
+      </div>
 
-  <div>
+      <div>
 
-    📍 Codó — Maranhão
+        📍 Codó — Maranhão
 
-    <br>
+        <br>
 
-    📱 (99) 98515-5084
+        📱 <a href="tel:+5599985155084">(99) 98515-5084</a>
 
-  </div>
+      </div>
 
-</div>
+    </div>
 
-<div
-  class="container"
-  style="
-    margin-top:20px;
-    padding-top:18px;
-    border-top:1px solid rgba(255,255,255,.1)
-  "
->
+    <div
+      class="container"
+      style="
+        margin-top:20px;
+        padding-top:18px;
+        border-top:1px solid rgba(255,255,255,.1)
+      "
+    >
 
-  As informações desta página têm caráter informativo.
-  Procedimentos e protocolos são realizados conforme
-  avaliação e indicação profissional.
+      As informações desta página têm caráter informativo.
+      Procedimentos e protocolos são realizados conforme
+      avaliação e indicação profissional.
 
-  <br><br>
+      <br><br>
 
-  © <span id="year"></span>
-  Instituto Bianca Pontes.
-  Todos os direitos reservados.
+      © <span id="year"></span>
+      Instituto Bianca Pontes.
+      Todos os direitos reservados.
 
-</div>
-```
+    </div>
 
   </footer>
 
-<a
-href="#"
-class="whatsapp-float whatsapp-link"
-aria-label="Falar com o Instituto Bianca Pontes pelo WhatsApp"
-data-message="Olá! Vim pelo site do Instituto Bianca Pontes e gostaria de agendar uma avaliação capilar com tricoscopia."
-
->
-
-```
-☎
-```
-
+  <a
+    href="#"
+    class="whatsapp-float whatsapp-link"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Falar com o Instituto Bianca Pontes pelo WhatsApp"
+    data-message="Olá! Vim pelo site do Instituto Bianca Pontes e gostaria de agendar uma avaliação capilar com tricoscopia."
+  >
+    ☎
   </a>
 
   <script>
@@ -1545,7 +1596,7 @@ data-message="Olá! Vim pelo site do Instituto Bianca Pontes e gostaria de agend
 
     let utms = {};
 
-    utmKeys.forEach(function(key) {
+    utmKeys.forEach(function (key) {
 
       const value = urlParams.get(key);
 
@@ -1575,7 +1626,7 @@ data-message="Olá! Vim pelo site do Instituto Bianca Pontes e gostaria de agend
 
       }
 
-    } catch(error) {
+    } catch (error) {
 
       console.log(
         "Erro ao salvar UTM:",
@@ -1597,7 +1648,7 @@ data-message="Olá! Vim pelo site do Instituto Bianca Pontes e gostaria de agend
 
     document
       .querySelectorAll(".whatsapp-link")
-      .forEach(function(button) {
+      .forEach(function (button) {
 
         const message =
           button.dataset.message ||
@@ -1608,7 +1659,7 @@ data-message="Olá! Vim pelo site do Instituto Bianca Pontes e gostaria de agend
 
         button.addEventListener(
           "click",
-          function() {
+          function () {
 
             if (typeof fbq === "function") {
 
